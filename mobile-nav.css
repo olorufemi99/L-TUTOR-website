@@ -1,0 +1,209 @@
+/* ==========================================================
+   L-TUTOR STUDENT MOBILE NAVIGATION
+   Matches the landing-page mobile navbar exactly.
+   Desktop layout is left untouched.
+========================================================== */
+
+.lt-mobile-generated {
+    display: none !important;
+}
+
+@media (max-width: 768px) {
+    body.lt-student-nav-ready > header.lt-desktop-header {
+        display: none !important;
+    }
+
+    .lt-mobile-generated {
+        display: flex !important;
+        position: sticky !important;
+        top: 0 !important;
+        left: 0 !important;
+        z-index: 10000 !important;
+        width: 100% !important;
+        height: 70px !important;
+        min-height: 70px !important;
+        padding: 8px 18px !important;
+        box-sizing: border-box !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        background: var(--surface) !important;
+        color: var(--text) !important;
+        border-bottom: 1px solid var(--border) !important;
+        box-shadow: 0 4px 18px rgba(0,0,0,.07) !important;
+    }
+
+    .lt-mobile-generated .lt-mobile-brand {
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 9px !important;
+        min-width: 0 !important;
+        max-width: calc(100% - 60px) !important;
+        color: var(--text) !important;
+        text-decoration: none !important;
+    }
+
+    .lt-mobile-generated .lt-mobile-brand img {
+        width: 40px !important;
+        height: 40px !important;
+        min-width: 40px !important;
+        max-width: 40px !important;
+        object-fit: contain !important;
+        object-position: center !important;
+        display: block !important;
+        border-radius: 50% !important;
+        flex: 0 0 40px !important;
+    }
+
+    .lt-mobile-generated .lt-mobile-brand span {
+        font-size: 22px !important;
+        font-weight: 800 !important;
+        letter-spacing: -.3px !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        color: var(--text) !important;
+    }
+
+    .lt-mobile-generated .lt-mobile-menu-button {
+        width: 46px !important;
+        height: 46px !important;
+        min-width: 46px !important;
+        border: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        background: transparent !important;
+        color: var(--text) !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 5px !important;
+        border-radius: 12px !important;
+        cursor: pointer !important;
+    }
+
+    .lt-mobile-generated .lt-mobile-menu-button span {
+        display: block !important;
+        width: 29px !important;
+        height: 3px !important;
+        border-radius: 99px !important;
+        background: var(--text) !important;
+        transition: .25s ease !important;
+    }
+
+    .lt-mobile-generated .lt-mobile-menu-button.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg) !important;
+    }
+
+    .lt-mobile-generated .lt-mobile-menu-button.active span:nth-child(2) {
+        opacity: 0 !important;
+    }
+
+    .lt-mobile-generated .lt-mobile-menu-button.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg) !important;
+    }
+
+    .lt-mobile-menu {
+        position: fixed !important;
+        top: 70px !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        max-height: calc(100vh - 70px) !important;
+        overflow-y: auto !important;
+        z-index: 9999 !important;
+        background: var(--surface) !important;
+        color: var(--text) !important;
+        border-bottom: 1px solid var(--border) !important;
+        box-shadow: 0 12px 30px rgba(0,0,0,.12) !important;
+        transform: translateY(-115%) !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        transition: transform .28s ease, opacity .2s ease, visibility .2s ease !important;
+    }
+
+    .lt-mobile-menu.active {
+        transform: translateY(0) !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+    .lt-mobile-menu ul {
+        list-style: none !important;
+        margin: 0 !important;
+        padding: 12px 5% 18px !important;
+    }
+
+    .lt-mobile-menu li {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .lt-mobile-menu a,
+    .lt-mobile-menu button {
+        width: 100% !important;
+        box-sizing: border-box !important;
+        display: block !important;
+        padding: 14px 16px !important;
+        margin: 2px 0 !important;
+        border: 0 !important;
+        border-radius: 12px !important;
+        background: transparent !important;
+        color: var(--text) !important;
+        text-decoration: none !important;
+        font: 600 15px Poppins, sans-serif !important;
+        text-align: left !important;
+        cursor: pointer !important;
+    }
+
+    .lt-mobile-menu a:hover,
+    .lt-mobile-menu a.active,
+    .lt-mobile-menu button:hover {
+        background: color-mix(in srgb, var(--primary) 10%, transparent) !important;
+        color: var(--primary) !important;
+    }
+
+    .lt-mobile-menu .lt-menu-logout {
+        margin-top: 8px !important;
+        text-align: center !important;
+        background: var(--primary) !important;
+        color: #fff !important;
+        border-radius: 999px !important;
+    }
+
+    .lt-mobile-menu .lt-menu-back {
+        border-bottom: 1px solid var(--border) !important;
+        margin-bottom: 8px !important;
+        border-radius: 0 !important;
+    }
+}
+
+@media (min-width: 769px) {
+    .lt-mobile-generated,
+    .lt-mobile-menu {
+        display: none !important;
+    }
+}
+
+@media (max-width: 400px) {
+    .lt-mobile-generated {
+        height: 64px !important;
+        min-height: 64px !important;
+    }
+
+    .lt-mobile-generated .lt-mobile-brand img {
+        width: 36px !important;
+        height: 36px !important;
+        min-width: 36px !important;
+        flex-basis: 36px !important;
+    }
+
+    .lt-mobile-generated .lt-mobile-brand span {
+        font-size: 20px !important;
+    }
+
+    .lt-mobile-menu {
+        top: 64px !important;
+        max-height: calc(100vh - 64px) !important;
+    }
+}

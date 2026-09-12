@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>Course | L-TUTOR</title>
+
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="course.css">
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+>
+
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+>
+
+<link rel="stylesheet" href="final-fixes.css">
+
+<link rel="stylesheet" href="mobile-nav.css">
+</head>
+
+
+<body>
+
+
+<!-- ==========================================
+     TOP BAR
+========================================== -->
+
+<header class="topbar">
+
+    <div class="logo">
+
+        <img
+            src="images/logo.png"
+            alt="L-TUTOR Logo"
+        >
+
+        <div class="logo-text">
+            <h2>L-TUTOR</h2>
+        </div>
+
+    </div>
+
+
+    <a
+        href="courses.html"
+        class="back-btn"
+    >
+
+        <i class="fa-solid fa-arrow-left"></i>
+
+        <span>Courses</span>
+
+    </a>
+
+</header>
+
+
+
+<!-- ==========================================
+     COURSE PAGE
+========================================== -->
+
+<main class="course-page">
+
+    <div
+        id="courseContent"
+        class="course-content"
+    >
+
+        <div class="course-loading">
+
+            <i class="fa-solid fa-spinner fa-spin"></i>
+
+            <p>Loading course...</p>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+
+<!-- ==========================================
+     FIREBASE
+========================================== -->
+
+<script
+src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js">
+</script>
+
+<script
+src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js">
+</script>
+
+<script
+src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js">
+</script>
+
+
+
+<!-- SWEET ALERT -->
+
+<script
+src="https://cdn.jsdelivr.net/npm/sweetalert2@11">
+</script>
+
+
+
+<!-- FIREBASE CONFIG -->
+
+<script src="firebase.js"></script>
+<script src="auth-guard.js"></script>
+
+
+<!-- POPUP -->
+
+<script src="popup.js"></script>
+
+
+<!-- THEME -->
+
+<script src="theme.js"></script>
+
+
+<!-- COURSE PAGE -->
+
+<script src="course.js"></script>
+
+
+<script src="animations.js"></script>
+<script src="mobile-nav.js"></script>
+</body>
+
+</html>

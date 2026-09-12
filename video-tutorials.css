@@ -1,0 +1,343 @@
+/* ==========================================
+   L-TUTOR STUDENT VIDEO TUTORIALS
+   ========================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Poppins", sans-serif;
+}
+
+.topbar {
+    width: 100%;
+    min-height: 70px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    background: var(--surface) !important;
+    border-bottom: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    min-width: 0;
+}
+
+.logo img {
+    width: 32px !important;
+    height: 32px !important;
+    max-width: 32px !important;
+    max-height: 32px !important;
+    min-width: 32px;
+    object-fit: contain !important;
+    display: block;
+}
+
+.logo h2 {
+    margin: 0;
+    color: var(--text) !important;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 9px 17px;
+    border-radius: 25px;
+    background: var(--primary);
+    color: #fff !important;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    transition: .3s ease;
+    white-space: nowrap;
+}
+
+.back-btn:hover {
+    transform: translateY(-2px);
+}
+
+.video-library {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 42px 7% 70px;
+}
+
+.video-header {
+    margin-bottom: 25px;
+}
+
+.video-header h1 {
+    margin: 0 0 7px;
+    color: var(--text) !important;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.video-header p {
+    margin: 0;
+    color: var(--text2) !important;
+    font-size: 13px;
+}
+
+.video-search {
+    position: relative;
+    width: 100%;
+    margin-bottom: 28px;
+}
+
+.video-search i {
+    position: absolute;
+    left: 17px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--primary);
+    pointer-events: none;
+}
+
+.video-search input {
+    width: 100%;
+    height: 48px;
+    padding: 0 18px 0 45px;
+    border-radius: 12px;
+    border: 1px solid var(--border) !important;
+    background: var(--surface2) !important;
+    color: var(--text) !important;
+    outline: none;
+    font-family: inherit;
+    font-size: 12px;
+}
+
+.video-search input:focus {
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 3px rgba(106, 27, 154, .10);
+}
+
+.videos-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    gap: 22px;
+}
+
+.video-card {
+    overflow: hidden;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--primary);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.video-card:hover {
+    transform: translateY(-5px);
+}
+
+.video-player {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #111;
+    overflow: hidden;
+}
+
+.video-player iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.video-content {
+    padding: 19px;
+}
+
+.video-course {
+    display: inline-flex;
+    padding: 5px 10px;
+    border-radius: 20px;
+    background: rgba(106, 27, 154, .10);
+    color: var(--primary) !important;
+    font-size: 10px;
+    font-weight: 700;
+    margin-bottom: 9px;
+}
+
+.video-title {
+    margin: 0 0 8px;
+    color: var(--text) !important;
+    font-size: 17px;
+    line-height: 1.35;
+}
+
+.video-lecturer {
+    margin: 0 0 10px;
+    color: var(--text2) !important;
+    font-size: 11px;
+}
+
+.video-lecturer i {
+    color: var(--primary);
+    margin-right: 5px;
+}
+
+.video-description {
+    margin: 0 0 15px;
+    color: var(--text2) !important;
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+.video-actions {
+    display: flex;
+}
+
+.watch-youtube {
+    width: 100%;
+    min-height: 38px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    border-radius: 22px;
+    background: var(--primary);
+    color: #fff !important;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: 600;
+    transition: .3s ease;
+}
+
+.watch-youtube:hover {
+    transform: translateY(-2px);
+}
+
+.video-loading,
+.video-error,
+.video-empty {
+    grid-column: 1 / -1;
+    padding: 60px 20px;
+    text-align: center;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: var(--surface);
+    color: var(--text2);
+    box-shadow: var(--shadow);
+}
+
+.video-loading i,
+.video-error > i,
+.video-empty > i {
+    display: block;
+    margin-bottom: 15px;
+    color: var(--primary);
+    font-size: 38px;
+}
+
+.video-error h3,
+.video-empty h3 {
+    margin: 0 0 8px;
+    color: var(--text) !important;
+}
+
+.video-error p,
+.video-empty p {
+    margin: 0 0 15px;
+    color: var(--text2) !important;
+    font-size: 12px;
+}
+
+.retry-video-btn {
+    border: 0;
+    border-radius: 22px;
+    padding: 10px 18px;
+    background: var(--primary);
+    color: #fff;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .topbar {
+        min-height: 62px;
+        padding: 0 18px;
+    }
+
+    .logo img {
+        width: 28px !important;
+        height: 28px !important;
+        max-width: 28px !important;
+        max-height: 28px !important;
+        min-width: 28px;
+    }
+
+    .logo h2 {
+        font-size: 16px;
+    }
+
+    .back-btn {
+        padding: 7px 13px;
+        font-size: 10px;
+    }
+
+    .video-library {
+        padding: 28px 18px 50px;
+    }
+
+    .video-header h1 {
+        font-size: 25px;
+    }
+
+    .video-header p {
+        font-size: 11px;
+    }
+
+    .videos-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+
+@media (max-width: 420px) {
+    .topbar {
+        padding: 0 14px;
+    }
+
+    .video-library {
+        padding: 25px 14px 45px;
+    }
+
+    .video-header h1 {
+        font-size: 23px;
+    }
+}
+
+/* Global logo safeguard */
+.logo img{width:32px !important;height:32px !important;max-width:32px !important;max-height:32px !important;object-fit:contain !important;display:block !important;}
+
+/* Final student video page refinements */
+body.dark-mode .video-player{background:#000;}
+body.dark-mode .watch-youtube{color:#fff!important;}
+.viewer-pdf{background:#fff;}
+@media(max-width:768px){
+    .video-player iframe{min-height:0;}
+}

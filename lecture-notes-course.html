@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>Course Notes | L-TUTOR</title>
+
+<link
+    rel="stylesheet"
+    href="lecture-notes-course.css"
+>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+>
+
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+>
+
+<link
+    rel="stylesheet"
+    href="theme.css"
+>
+
+<link rel="stylesheet" href="final-fixes.css">
+
+<link rel="stylesheet" href="mobile-nav.css">
+</head>
+
+<body>
+
+
+<header class="topbar">
+
+    <div class="logo">
+
+        <img
+            src="images/logo.png"
+            alt="L-TUTOR Logo"
+        >
+
+        <h2>L-TUTOR</h2>
+
+    </div>
+
+
+    <a
+        href="lecture-notes.html"
+        class="back-btn"
+    >
+
+        <i class="fa-solid fa-arrow-left"></i>
+
+        Lecture Notes
+
+    </a>
+
+</header>
+
+
+<main class="course-notes-page">
+
+    <section
+        class="course-header"
+        id="courseHeader"
+    >
+
+        <div class="course-icon">
+
+            <i class="fa-solid fa-file-lines"></i>
+
+        </div>
+
+
+        <div
+            class="course-code"
+            id="courseCode"
+        >
+            Loading...
+        </div>
+
+
+        <h1 id="courseTitle">
+            Loading Course...
+        </h1>
+
+
+        <p id="courseLecturer">
+            Loading...
+        </p>
+
+    </section>
+
+
+    <section class="notes-container">
+
+        <div class="notes-heading">
+
+            <h2>
+
+                <i class="fa-solid fa-folder-open"></i>
+
+                Lecture Notes
+
+            </h2>
+
+            <span id="noteCount">
+                0 Notes
+            </span>
+
+        </div>
+
+
+        <div
+            id="notesList"
+            class="notes-list"
+        >
+
+            <div class="loading-box">
+
+                <i class="
+                    fa-solid
+                    fa-spinner
+                    fa-spin
+                "></i>
+
+                <p>
+                    Loading lecture notes...
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+
+<script src="firebase.js"></script>
+<script src="auth-guard.js"></script>
+
+<script src="theme.js"></script>
+
+<script src="lecture-notes-course.js"></script>
+
+<script src="animations.js"></script>
+<script src="mobile-nav.js"></script>
+</body>
+
+</html>

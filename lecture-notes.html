@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>Lecture Notes | L-TUTOR</title>
+
+<link
+    rel="stylesheet"
+    href="lecture-notes.css"
+>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+>
+
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+>
+
+<link
+    rel="stylesheet"
+    href="theme.css"
+>
+
+<link rel="stylesheet" href="final-fixes.css">
+
+<link rel="stylesheet" href="mobile-nav.css">
+</head>
+
+<body>
+
+<header class="topbar">
+
+    <div class="logo">
+
+        <img
+            src="images/logo.png"
+            alt="L-TUTOR Logo"
+        >
+
+        <h2>L-TUTOR</h2>
+
+    </div>
+
+
+    <a
+        href="dashboard.html"
+        class="back-btn"
+    >
+
+        <i class="fa-solid fa-arrow-left"></i>
+
+        Back
+
+    </a>
+
+</header>
+
+
+<section class="page-header">
+
+    <h1>Lecture Notes</h1>
+
+    <p>
+        Browse lecture materials for all courses.
+    </p>
+
+</section>
+
+
+<section class="search-box">
+
+    <input
+        type="text"
+        id="courseSearch"
+        placeholder="Search course code or title..."
+        autocomplete="off"
+    >
+
+</section>
+
+
+<section
+    class="course-list"
+    id="courseList"
+>
+</section>
+
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+
+<script src="firebase.js"></script>
+<script src="auth-guard.js"></script>
+
+<script src="theme.js"></script>
+
+<script src="animations.js"></script>
+
+<script src="lecture-notes.js"></script>
+
+<script src="mobile-nav.js"></script>
+</body>
+
+</html>

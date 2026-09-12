@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff" id="ltThemeColor">
+<meta name="color-scheme" content="light dark">
+
+<title>L-TUTOR | News</title>
+
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="news.css">
+<link rel="stylesheet" href="public-nav.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="stylesheet" href="final-fixes.css">
+
+</head>
+
+<body>
+
+<header class="public-header">
+
+    <nav class="public-desktop-nav" aria-label="Main navigation">
+        <a class="public-brand" href="index.html">
+            <img src="images/logo.png" alt="L-TUTOR logo">
+            <span>L-TUTOR</span>
+        </a>
+        <ul class="public-links"><li><a href="index.html" class="">Home</a></li><li><a href="about.html" class="">About</a></li><li><a href="public-courses.html" class="">Courses</a></li><li><a href="news.html" class="active">News</a></li><li><a href="contact.html" class="">Contact</a></li></ul>
+        <a class="public-login" href="login.html">Login</a>
+    </nav>
+
+    <nav class="public-mobile-nav" aria-label="Mobile navigation">
+        <a class="public-mobile-brand" href="index.html">
+            <img src="images/logo.png" alt="L-TUTOR logo">
+            <span>L-TUTOR</span>
+        </a>
+        <button id="publicMenuButton" class="public-menu-button" type="button" aria-label="Open menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <div id="publicMobileMenu" class="public-mobile-menu">
+        <ul><li><a href="index.html" class="">Home</a></li><li><a href="about.html" class="">About</a></li><li><a href="public-courses.html" class="">Courses</a></li><li><a href="news.html" class="active">News</a></li><li><a href="contact.html" class="">Contact</a></li>
+            <li><a class="mobile-login" href="login.html">Login</a></li>
+        </ul>
+    </div>
+
+</header>
+
+<section class="hero">
+
+<h1>Department News</h1>
+
+<p>
+
+Stay updated with the latest news, events and academic information.
+
+</p>
+
+</section>
+
+<section class="news-container">
+
+<div id="newsPageContainer"></div>
+
+</section>
+
+<footer>
+
+<p>
+
+© 2026 L-TUTOR | Learn Smarter.
+
+</p>
+
+</footer>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+<script src="firebase.js"></script>
+<script src="news-page.js"></script>
+<script src="theme.js"></script>
+
+<script src="animations.js"></script>
+<script src="public-nav.js"></script>
+</body>
+
+</html>

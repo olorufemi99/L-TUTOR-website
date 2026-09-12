@@ -1,0 +1,207 @@
+/* ======================================
+   L-TUTOR ANNOUNCEMENTS
+====================================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:var(--bg);
+color:var(--text);
+transition:.35s;
+}
+
+/* ==========================
+TOPBAR
+========================== */
+
+.topbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:var(--surface);
+border-bottom:1px solid var(--border);
+box-shadow:var(--shadow);
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo img{
+width:55px;
+height:55px;
+object-fit:contain;
+}
+
+.logo h2{
+color:var(--primary);
+}
+
+.back-btn{
+text-decoration:none;
+color:var(--primary);
+font-weight:600;
+}
+
+.back-btn i{
+margin-right:8px;
+}
+
+/* ==========================
+PAGE
+========================== */
+
+.announcement-page{
+padding:40px 8%;
+}
+
+.announcement-page h1{
+font-size:34px;
+color:var(--primary);
+margin-bottom:10px;
+}
+
+.announcement-page p{
+color:var(--text2);
+margin-bottom:30px;
+}
+
+/* ==========================
+SEARCH
+========================== */
+
+#searchAnnouncement{
+width:100%;
+padding:16px;
+border-radius:14px;
+border:1px solid var(--border);
+background:var(--surface2);
+color:var(--text);
+outline:none;
+margin-bottom:30px;
+font-size:16px;
+}
+
+/* ==========================
+GRID
+========================== */
+
+.announcement-grid{
+display:grid;
+gap:25px;
+}
+
+/* ==========================
+CARD
+========================== */
+
+.announcement-card{
+background:var(--surface);
+border:1px solid var(--border);
+border-radius:18px;
+padding:25px;
+box-shadow:var(--shadow);
+transition:.35s;
+animation:fadeUp .5s ease forwards;
+}
+
+.announcement-card:hover{
+transform:translateY(-5px);
+}
+
+.announcement-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:15px;
+}
+
+.announcement-title{
+font-size:22px;
+font-weight:600;
+color:var(--primary);
+}
+
+.announcement-date{
+font-size:13px;
+color:var(--text2);
+}
+
+.announcement-body{
+line-height:1.8;
+color:var(--text);
+margin-bottom:20px;
+white-space:pre-wrap;
+}
+
+.announcement-author{
+font-size:14px;
+font-weight:600;
+color:var(--text2);
+border-top:1px solid var(--border);
+padding-top:15px;
+}
+
+/* ==========================
+EMPTY
+========================== */
+
+.empty-announcement{
+text-align:center;
+padding:80px;
+font-size:18px;
+color:var(--text2);
+}
+
+/* ==========================
+ANIMATION
+========================== */
+
+@keyframes fadeUp{
+
+0%{
+opacity:0;
+transform:translateY(25px);
+}
+
+100%{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* ==========================
+RESPONSIVE
+========================== */
+
+@media(max-width:768px){
+
+.topbar{
+flex-direction:column;
+gap:15px;
+}
+
+.announcement-page{
+padding:25px;
+}
+
+.announcement-page h1{
+font-size:28px;
+}
+
+.announcement-header{
+flex-direction:column;
+align-items:flex-start;
+gap:8px;
+}
+
+}

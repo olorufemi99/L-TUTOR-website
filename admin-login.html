@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Administrator Login | L-TUTOR</title>
+
+<link rel="stylesheet" href="admin-login.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="stylesheet" href="final-fixes.css">
+
+</head>
+
+<body>
+
+<div class="login-container">
+
+<div class="login-box">
+
+<img src="images/logo.png" alt="L-TUTOR Logo" class="logo">
+
+<h2>Administrator Login</h2>
+
+<p class="subtitle">
+Authorized administrators only.
+</p>
+
+<form id="adminLoginForm">
+
+<div class="input-box">
+
+<i class="fa-solid fa-envelope"></i>
+
+<input
+type="email"
+id="adminEmail"
+placeholder="Administrator Email"
+required>
+
+</div>
+
+<div class="input-box">
+
+<i class="fa-solid fa-lock"></i>
+
+<input
+type="password"
+id="adminPassword"
+placeholder="Password"
+required>
+
+<i class="fa-solid fa-eye toggle-password"
+onclick="togglePassword()"></i>
+
+</div>
+
+<button type="submit" class="login-btn">
+
+Secure Login
+
+</button>
+
+</form>
+
+<div class="bottom-links">
+
+<a href="index.html">
+
+<i class="fa-solid fa-arrow-left"></i>
+
+Back to Home
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+<script src="firebase.js"></script>
+<script src="admin-login.js"></script>
+
+</body>
+
+</html>

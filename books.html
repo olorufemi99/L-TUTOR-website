@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff" id="ltThemeColor">
+<meta name="color-scheme" content="light dark">
+
+<title>Books | L-TUTOR</title>
+
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="books.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="stylesheet" href="final-fixes.css">
+
+<link rel="stylesheet" href="mobile-nav.css">
+</head>
+
+<body>
+
+<header class="topbar">
+
+<a href="dashboard.html" class="back-btn">
+
+<i class="fa-solid fa-arrow-left"></i>
+
+Back
+
+</a>
+
+<h2>L-TUTOR Library</h2>
+
+</header>
+
+<section class="library">
+
+<div class="library-header">
+
+<h1>Department Books</h1>
+
+<p>Download recommended textbooks and handbooks.</p>
+
+</div>
+
+<div class="search-box">
+
+<input
+type="text"
+id="searchBook"
+placeholder="Search books..."
+onkeyup="searchBooks()">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+</div>
+
+<div id="booksContainer" class="books-grid">
+
+<!-- Books will load here -->
+
+</div>
+
+</section>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+<script src="firebase.js"></script>
+<script src="auth-guard.js"></script>
+<script src="popup.js"></script>
+<script src="theme.js"></script>
+<script src="books.js"></script>
+
+<script src="animations.js"></script>
+<script src="mobile-nav.js"></script>
+</body>
+
+</html>

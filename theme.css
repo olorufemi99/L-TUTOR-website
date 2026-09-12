@@ -1,0 +1,939 @@
+/* ==========================================
+   L-TUTOR GLOBAL THEME
+========================================== */
+
+:root{
+
+    /* Light Theme */
+    --bg:#f6f2ff;
+    --surface:#ffffff;
+    --surface2:#fbf8ff;
+
+    --text:#222;
+    --text2:#666;
+
+    --primary:#6A1B9A;
+
+    --border:#ece2ff;
+
+    --shadow:0 10px 30px rgba(106,27,154,.10);
+
+}
+
+body.dark-mode{
+
+    --bg:#11131a;
+    --surface:#1b1f2a;
+    --surface2:#242938;
+
+    --text:#ffffff;
+    --text2:#cfcfcf;
+
+    --primary:#9C4DFF;
+
+    --border:#31374a;
+
+    --shadow:0 15px 35px rgba(0,0,0,.45);
+
+}
+
+/* ==========================
+BODY
+========================== */
+
+body{
+
+background:var(--bg)!important;
+color:var(--text)!important;
+transition:.35s;
+
+}
+
+/* ==========================
+TOPBAR
+========================== */
+
+.topbar{
+
+background:var(--surface)!important;
+color:var(--text)!important;
+border-bottom:1px solid var(--border);
+box-shadow:var(--shadow);
+
+}
+
+.topbar h1,
+.topbar h2,
+.topbar p{
+
+color:var(--text)!important;
+
+}
+
+/* ==========================
+PANELS
+========================== */
+
+.panel,
+.profile-card,
+.details-card,
+.settings-card{
+
+background:var(--surface)!important;
+color:var(--text)!important;
+
+}
+
+.dashboard{
+
+background:transparent!important;
+color:var(--text)!important;
+
+}
+
+/* ==========================
+CARDS
+========================== */
+
+.card,
+.stat-card,
+.resource-card,
+.announcement-card{
+
+background:var(--surface)!important;
+color:var(--text)!important;
+border:1px solid var(--border);
+box-shadow:var(--shadow);
+transition:.3s;
+
+}
+
+.card:hover,
+.stat-card:hover{
+
+transform:translateY(-4px);
+
+}
+
+/* ==========================
+TABLES
+========================== */
+
+table{
+
+background:transparent;
+
+}
+
+table th{
+
+color:var(--primary)!important;
+
+}
+
+table td{
+
+color:var(--text)!important;
+border-bottom:1px solid var(--border);
+
+}
+
+/* ==========================
+INPUTS
+========================== */
+
+input,
+textarea,
+select{
+
+background:var(--surface2)!important;
+color:var(--text)!important;
+border:1px solid var(--border)!important;
+
+}
+
+input::placeholder,
+textarea::placeholder{
+
+color:var(--text2);
+
+}
+
+/* ==========================
+BUTTONS
+========================== */
+
+button,
+.save-btn,
+.edit-btn{
+
+background:var(--primary)!important;
+color:#fff!important;
+
+}
+
+
+
+/* ==========================
+TEXT
+========================== */
+
+h1,h2,h3,h4,h5,h6{
+
+color:var(--text)!important;
+
+}
+
+p,
+span,
+label,
+td,
+li{
+
+color:var(--text2)!important;
+
+}
+
+/* ==========================
+LINKS
+========================== */
+
+a{
+
+color:inherit;
+
+}
+
+/* ==========================
+SEARCH
+========================== */
+
+.search-box input{
+
+background:var(--surface2)!important;
+
+}
+
+/* ==========================
+STATUS BADGE
+========================== */
+
+.status-badge{
+
+background:green;
+color:white;
+padding:4px 12px;
+border-radius:30px;
+
+}
+
+/* ==========================
+SCROLLBAR
+========================== */
+
+::-webkit-scrollbar{
+
+width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:var(--primary);
+border-radius:20px;
+
+}
+body{
+
+    background:var(--bg)!important;
+    transition:background .35s ease,
+               color .35s ease;
+
+}
+
+.topbar,
+.panel,
+.profile-card,
+.details-card,
+.card,
+.dashboard-card,
+.course-card,
+.settings-card,
+.resource-card{
+
+    background:var(--surface)!important;
+    transition:.35s;
+
+}
+
+input,
+textarea,
+select{
+
+    background:var(--surface2)!important;
+
+}
+
+.dashboard-grid .card:hover{
+
+    transform:translateY(-6px);
+    box-shadow:0 18px 35px rgba(106,27,154,.18);
+
+}
+
+body.dark-mode .dashboard-grid .card:hover{
+
+    box-shadow:0 18px 35px rgba(0,0,0,.5);
+
+}
+/* ======================================
+GLOBAL SCROLL ANIMATION
+====================================== */
+
+.fade-up{
+
+opacity:0;
+transform:translateY(40px);
+
+transition:
+
+opacity .8s ease,
+
+transform .8s ease;
+
+}
+
+.fade-up.show{
+
+opacity:1;
+transform:translateY(0);
+
+}
+.hidden{
+
+opacity:0;
+transform:translateY(40px);
+transition:all .8s ease;
+
+}
+
+.show{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+/* ==========================================
+   L-TUTOR GLOBAL DARK MODE EXTENSIONS
+   Applies to student pages
+========================================== */
+
+html.dark-mode,
+body.dark-mode {
+    background: var(--bg) !important;
+    color: var(--text) !important;
+}
+
+body.dark-mode .navbar,
+body.dark-mode .topbar,
+body.dark-mode header,
+body.dark-mode footer {
+    background: var(--surface) !important;
+    color: var(--text) !important;
+}
+
+body.dark-mode .hero {
+    background: linear-gradient(
+        135deg,
+        #11131a 0%,
+        #18121f 100%
+    ) !important;
+}
+
+body.dark-mode .features,
+body.dark-mode .announcements,
+body.dark-mode .courses,
+body.dark-mode .library,
+body.dark-mode .video-library,
+body.dark-mode .course-header,
+body.dark-mode .course-content,
+body.dark-mode .register-section,
+body.dark-mode .contact-section,
+body.dark-mode .about-section,
+body.dark-mode .news-section,
+body.dark-mode main,
+body.dark-mode section {
+    background-color: var(--bg) !important;
+    color: var(--text) !important;
+}
+
+body.dark-mode .card,
+body.dark-mode .course-card,
+body.dark-mode .course-item,
+body.dark-mode .book-card,
+body.dark-mode .video-card,
+body.dark-mode .content-card,
+body.dark-mode .announcement-card,
+body.dark-mode .resource-card,
+body.dark-mode .contact-card,
+body.dark-mode .news-card,
+body.dark-mode .profile-card,
+body.dark-mode .settings-card,
+body.dark-mode .register-box,
+body.dark-mode .login-box,
+body.dark-mode .panel,
+body.dark-mode .library-header,
+body.dark-mode .video-header,
+body.dark-mode .empty-books,
+body.dark-mode .video-loading,
+body.dark-mode .video-error,
+body.dark-mode .video-empty {
+    background: var(--surface) !important;
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    box-shadow: var(--shadow) !important;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6,
+body.dark-mode .book-title,
+body.dark-mode .video-title,
+body.dark-mode .course-title {
+    color: var(--text) !important;
+}
+
+body.dark-mode p,
+body.dark-mode small,
+body.dark-mode label,
+body.dark-mode .book-author,
+body.dark-mode .book-description,
+body.dark-mode .video-description,
+body.dark-mode .video-lecturer,
+body.dark-mode .library-header p,
+body.dark-mode .video-header p {
+    color: var(--text2) !important;
+}
+
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+    background: var(--surface2) !important;
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+    color: var(--text2) !important;
+}
+
+body.dark-mode .nav-links a {
+    color: var(--text) !important;
+}
+
+body.dark-mode .nav-links a:hover {
+    background: var(--surface2) !important;
+    color: var(--primary) !important;
+}
+
+body.dark-mode .btn2 {
+    color: var(--primary) !important;
+    border-color: var(--primary) !important;
+}
+
+body.dark-mode .btn2:hover {
+    background: var(--primary) !important;
+    color: #fff !important;
+}
+
+/* ==========================================
+   GLOBAL DARK MODE BUTTON
+========================================== */
+
+.lt-theme-toggle {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    z-index: 9999;
+
+    width: 44px;
+    height: 44px;
+
+    border: 1px solid var(--border);
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--surface);
+    color: var(--primary);
+
+    box-shadow: var(--shadow);
+
+    cursor: pointer;
+    font-size: 16px;
+
+    transition:
+        transform .25s ease,
+        background .25s ease,
+        color .25s ease;
+}
+
+.lt-theme-toggle:hover {
+    transform: translateY(-3px) rotate(8deg);
+}
+
+body.dark-mode .lt-theme-toggle {
+    background: var(--surface2);
+    color: #ffd54f;
+}
+
+/* ==========================================
+   GLOBAL SCROLL REVEAL
+========================================== */
+
+.lt-reveal {
+    opacity: 0;
+    transform: translateY(38px);
+    transition:
+        opacity .75s ease,
+        transform .75s ease;
+}
+
+.lt-reveal-visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .lt-reveal {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+}
+
+/* ==========================================
+   GLOBAL L-TUTOR LOGO SAFETY
+========================================== */
+.topbar .logo img,
+.navbar .logo img,
+.desktop-navbar .logo img,
+.mobile-navbar .mobile-logo img,
+.logo img{
+    width:32px !important;
+    height:32px !important;
+    max-width:32px !important;
+    max-height:32px !important;
+    min-width:0 !important;
+    min-height:0 !important;
+    object-fit:contain !important;
+    display:block !important;
+}
+.mobile-navbar .mobile-logo img{
+    width:30px !important;
+    height:30px !important;
+}
+
+/* ==========================================
+   FINAL LOGO FIX
+   The supplied logo image has transparent/empty
+   vertical space. "cover" prevents the tiny logo
+   problem caused by object-fit: contain.
+========================================== */
+.logo img,
+.topbar .logo img,
+.navbar .logo img,
+.desktop-navbar .logo img,
+.mobile-navbar .mobile-logo img{
+    width:46px !important;
+    height:46px !important;
+    min-width:46px !important;
+    min-height:46px !important;
+    max-width:46px !important;
+    max-height:46px !important;
+    object-fit:cover !important;
+    object-position:center !important;
+    border-radius:50% !important;
+    display:block !important;
+}
+.mobile-navbar .mobile-logo img{
+    width:42px !important;
+    height:42px !important;
+    min-width:42px !important;
+    min-height:42px !important;
+    max-width:42px !important;
+    max-height:42px !important;
+}
+@media(max-width:400px){
+    .mobile-navbar .mobile-logo img{
+        width:38px !important;
+        height:38px !important;
+        min-width:38px !important;
+        min-height:38px !important;
+        max-width:38px !important;
+        max-height:38px !important;
+    }
+}
+/* Keep student page footers and browser-safe areas themed. */
+body.dark-mode footer{
+    background:var(--surface)!important;
+    color:var(--text)!important;
+    border-top:1px solid var(--border)!important;
+}
+body.dark-mode footer *{color:var(--text2)!important;}
+html,body{min-height:100%;}
+
+/* Final global dark-mode coverage */
+html.dark-mode{
+    background:var(--bg) !important;
+    color-scheme:dark;
+}
+html:not(.dark-mode){
+    background:var(--bg) !important;
+}
+body.dark-mode{
+    min-height:100vh;
+    background:var(--bg) !important;
+    color:var(--text) !important;
+}
+body.dark-mode main,
+body.dark-mode section,
+body.dark-mode .hero,
+body.dark-mode .news-container,
+body.dark-mode .about-container,
+body.dark-mode .contact-container,
+body.dark-mode .contact-form-section,
+body.dark-mode .login-required{
+    background-color:transparent;
+    color:var(--text);
+}
+
+
+/* ==========================================
+   FINAL GLOBAL THEME / MOBILE / LOGO FIX
+========================================== */
+html{min-height:100%;width:100%;background:var(--bg)!important;}
+html.dark-mode{background:#11131a!important;color-scheme:dark;}
+html:not(.dark-mode){background:#f6f2ff!important;color-scheme:light;}
+body{min-height:100vh!important;width:100%!important;margin:0!important;background:var(--bg)!important;color:var(--text)!important;overflow-x:hidden;}
+body.dark-mode{background:#11131a!important;color:#fff!important;}
+body.dark-mode footer,body.dark-mode .site-footer{background:var(--surface)!important;color:var(--text)!important;border-color:var(--border)!important;}
+body.dark-mode section,body.dark-mode main{background-color:transparent;}
+/* Never crop the square departmental logo. */
+.logo img,.navbar .logo img,.desktop-navbar .logo img,.mobile-navbar .mobile-logo img,.public-brand img,.public-mobile-brand img{object-fit:contain!important;object-position:center!important;border-radius:50%!important;background:transparent!important;}
+.logo img,.navbar .logo img,.desktop-navbar .logo img{width:40px!important;height:40px!important;min-width:40px!important;max-width:40px!important;min-height:40px!important;max-height:40px!important;}
+.mobile-navbar .mobile-logo img,.public-mobile-brand img{width:40px!important;height:40px!important;min-width:40px!important;max-width:40px!important;min-height:40px!important;max-height:40px!important;}
+
+/* ==========================================================
+   FINAL DARK MODE / DESKTOP MODE HARDENING
+========================================================== */
+html.dark-mode,
+html.dark-mode body{
+    background:#11131a !important;
+    color:#fff !important;
+}
+
+html.dark-mode body > *,
+body.dark-mode > *{
+    color:var(--text) !important;
+}
+
+html.dark-mode body main,
+html.dark-mode body section,
+html.dark-mode body .hero,
+html.dark-mode body .features,
+html.dark-mode body .announcements,
+html.dark-mode body .courses,
+html.dark-mode body .library,
+html.dark-mode body .video-library,
+html.dark-mode body .news-container,
+html.dark-mode body .about-container,
+html.dark-mode body .contact-container{
+    background-color:transparent !important;
+    color:var(--text) !important;
+}
+
+html.dark-mode body .hero{
+    background:linear-gradient(135deg,#11131a 0%,#1b1324 100%) !important;
+}
+
+html.dark-mode body .card,
+html.dark-mode body .course-card,
+html.dark-mode body .announcement-card,
+html.dark-mode body .news-card,
+html.dark-mode body .book-card,
+html.dark-mode body .video-card,
+html.dark-mode body .profile-card,
+html.dark-mode body .details-card,
+html.dark-mode body .register-box,
+html.dark-mode body .login-box,
+html.dark-mode body .panel,
+html.dark-mode body .library-header,
+html.dark-mode body .video-header,
+html.dark-mode body .empty-books,
+html.dark-mode body .video-loading,
+html.dark-mode body .video-error,
+html.dark-mode body .video-empty{
+    background:var(--surface) !important;
+    color:var(--text) !important;
+    border-color:var(--border) !important;
+}
+
+html.dark-mode body footer,
+html.dark-mode body .site-footer{
+    background:var(--surface) !important;
+    color:var(--text) !important;
+    border-color:var(--border) !important;
+}
+
+html.dark-mode body footer *{
+    color:var(--text2) !important;
+}
+
+/* Public page hard-coded white sections */
+html.dark-mode body .top-news-bar{
+    background:var(--surface) !important;
+    color:var(--text) !important;
+    border-color:var(--border) !important;
+}
+html.dark-mode body .top-news-title,
+html.dark-mode body .top-news-date{
+    color:var(--text) !important;
+}
+
+/* Keep browser/system chrome consistent where supported. */
+html.dark-mode{color-scheme:dark !important;}
+html:not(.dark-mode){color-scheme:light !important;}
+
+/* ==========================================================
+   FINAL LOGO SIZE
+========================================================== */
+.public-brand img{
+    width:44px !important;height:44px !important;
+    min-width:44px !important;max-width:44px !important;
+    min-height:44px !important;max-height:44px !important;
+    object-fit:contain !important;
+}
+.public-mobile-brand img{
+    width:40px !important;height:40px !important;
+    min-width:40px !important;max-width:40px !important;
+    min-height:40px !important;max-height:40px !important;
+    object-fit:contain !important;
+}
+
+/* ==========================================================
+   L-TUTOR COMPLETE DARK THEME OVERRIDE
+   Keeps every student dashboard page on one dark canvas.
+========================================================== */
+
+html.dark-mode,
+body.dark-mode {
+    background: #11131a !important;
+    color: #f5f5f7 !important;
+    min-height: 100vh !important;
+    color-scheme: dark !important;
+}
+
+body.dark-mode,
+body.dark-mode main,
+body.dark-mode section,
+body.dark-mode article,
+body.dark-mode .courses,
+body.dark-mode .course-page,
+body.dark-mode .library,
+body.dark-mode .video-library,
+body.dark-mode .lecturer-section,
+body.dark-mode .search-section,
+body.dark-mode .page-header,
+body.dark-mode .dashboard,
+body.dark-mode .features,
+body.dark-mode .announcements,
+body.dark-mode .news-section,
+body.dark-mode .about-section,
+body.dark-mode .contact-section,
+body.dark-mode .settings-section {
+    background-color: #11131a !important;
+    color: #f5f5f7 !important;
+}
+
+body.dark-mode .topbar,
+body.dark-mode header,
+body.dark-mode .navbar,
+body.dark-mode footer {
+    background: #1b1f2a !important;
+    color: #f5f5f7 !important;
+    border-color: #31374a !important;
+}
+
+body.dark-mode .card,
+body.dark-mode .course-card,
+body.dark-mode .course-item-card,
+body.dark-mode .course-video-card,
+body.dark-mode .resource-card,
+body.dark-mode .book-card,
+body.dark-mode .video-card,
+body.dark-mode .lecturer-card,
+body.dark-mode .panel,
+body.dark-mode .profile-card,
+body.dark-mode .details-card,
+body.dark-mode .settings-card,
+body.dark-mode .announcement-card,
+body.dark-mode .news-card,
+body.dark-mode .contact-card,
+body.dark-mode .content-card,
+body.dark-mode .register-box,
+body.dark-mode .login-card,
+body.dark-mode .course-header,
+body.dark-mode .course-empty,
+body.dark-mode .course-error,
+body.dark-mode .video-loading,
+body.dark-mode .video-error,
+body.dark-mode .video-empty,
+body.dark-mode .empty-books {
+    background: #1b1f2a !important;
+    color: #f5f5f7 !important;
+    border-color: #31374a !important;
+    box-shadow: 0 12px 30px rgba(0,0,0,.38) !important;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6,
+body.dark-mode .course-title,
+body.dark-mode .book-title,
+body.dark-mode .video-title,
+body.dark-mode .lecturer-content h2,
+body.dark-mode .logo h2,
+body.dark-mode .page-header h1,
+body.dark-mode .dashboard h1,
+body.dark-mode .course-header h1 {
+    color: #ffffff !important;
+}
+
+body.dark-mode p,
+body.dark-mode label,
+body.dark-mode small,
+body.dark-mode li,
+body.dark-mode td,
+body.dark-mode .book-author,
+body.dark-mode .book-description,
+body.dark-mode .video-description,
+body.dark-mode .video-lecturer,
+body.dark-mode .lecturer-content .rank,
+body.dark-mode .lecturer-content .bio,
+body.dark-mode .page-header p,
+body.dark-mode #welcome,
+body.dark-mode .course-lecturer,
+body.dark-mode .course-loading p,
+body.dark-mode .course-empty p,
+body.dark-mode .course-error p {
+    color: #cfd3dc !important;
+}
+
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select,
+body.dark-mode .search-box input,
+body.dark-mode .course-search,
+body.dark-mode .course-filter select {
+    background: #242938 !important;
+    color: #ffffff !important;
+    border-color: #3b4358 !important;
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+    color: #aeb4c2 !important;
+}
+
+body.dark-mode .course-icon,
+body.dark-mode .course-meta span,
+body.dark-mode .resource-icon,
+body.dark-mode .resource-arrow,
+body.dark-mode .empty-icon,
+body.dark-mode .course-item-icon,
+body.dark-mode .course-video-badge,
+body.dark-mode .position {
+    background: #242938 !important;
+    color: #c47dff !important;
+}
+
+body.dark-mode table th {
+    background: #242938 !important;
+    color: #c47dff !important;
+}
+
+body.dark-mode table td {
+    color: #d8dbe2 !important;
+    border-color: #31374a !important;
+}
+
+body.dark-mode .nav-links a,
+body.dark-mode .back-btn,
+body.dark-mode .topbar a {
+    color: #ffffff !important;
+}
+
+body.dark-mode .nav-links a:hover,
+body.dark-mode .back-btn:hover {
+    background: #242938 !important;
+    color: #c47dff !important;
+}
+
+/* The page canvas must continue behind the mobile/desktop header. */
+body.dark-mode .video-player,
+body.dark-mode .course-video-player {
+    background: #000 !important;
+}
+
+@media (max-width: 768px) {
+    html.dark-mode,
+    body.dark-mode {
+        width: 100% !important;
+        overflow-x: hidden !important;
+    }
+}
+
+/* ==========================================
+   GLOBAL TOP-SECTION DARK MODE OVERRIDES
+   ========================================== */
+body.dark-mode header,
+html.dark-mode body header,
+body.dark-mode .navbar,
+html.dark-mode body .navbar,
+body.dark-mode .desktop-navbar,
+html.dark-mode body .desktop-navbar,
+body.dark-mode .mobile-navbar,
+html.dark-mode body .mobile-navbar {
+    background: var(--surface, #1b1f2a) !important;
+    color: var(--text, #fff) !important;
+    border-color: var(--border, #31374a) !important;
+}
+
+body.dark-mode .page-header,
+html.dark-mode body .page-header {
+    background: linear-gradient(135deg, #11131a, #1b1324) !important;
+    color: var(--text, #fff) !important;
+}
+
+body.dark-mode .page-header h1,
+html.dark-mode body .page-header h1,
+body.dark-mode .page-header p,
+html.dark-mode body .page-header p {
+    color: var(--text, #fff) !important;
+}
+
+body.dark-mode .page-header p,
+html.dark-mode body .page-header p {
+    color: var(--text2, #cfcfcf) !important;
+}

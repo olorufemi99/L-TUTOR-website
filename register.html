@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff" id="ltThemeColor">
+<meta name="color-scheme" content="light dark">
+
+<title>Student Registration | L-TUTOR</title>
+
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="register.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="stylesheet" href="theme.css">
+
+<link rel="stylesheet" href="final-fixes.css">
+
+</head>
+
+<body>
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+
+<img src="images/logo.png" alt="Logo">
+
+<h2>L-TUTOR</h2>
+
+</div>
+
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="login.html">Login</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<section class="register-section">
+
+<div class="register-box">
+
+<h1>Create Student Account</h1>
+
+<p class="subtitle">
+
+Register to gain access to L-TUTOR resources.
+
+</p>
+
+<form id="registerForm">
+
+<div class="form-group">
+
+<label>Passport Photo</label>
+
+<div class="passport-upload">
+
+<img
+id="passportPreview"
+src="images/default-user.svg"
+alt="Passport">
+
+<input
+type="file"
+id="passport"
+accept="image/*"
+hidden>
+
+<button
+type="button"
+class="upload-btn"
+onclick="document.getElementById('passport').click()">
+
+<i class="fa-solid fa-camera"></i>
+
+Choose Passport
+
+</button>
+
+</div>
+
+</div>
+
+<div class="form-group">
+
+<label>Full Name</label>
+
+<input
+type="text"
+id="fullname"
+placeholder="Enter your full name"
+required>
+
+</div>
+
+<div class="form-group">
+
+<label>Matric Number</label>
+
+<input
+type="text"
+id="matric"
+placeholder="230833041"
+required>
+
+</div>
+
+<div class="form-group">
+
+<label>Department</label>
+
+<input
+type="text"
+id="department"
+value="Local Government Administration and Development Studies"
+readonly>
+
+</div>
+
+<div class="form-group">
+
+<label>Faculty</label>
+
+<input
+type="text"
+id="faculty"
+value="Faculty of Management Sciences"
+readonly>
+
+</div>
+
+<div class="form-group">
+
+<label>Email Address</label>
+
+<input
+type="email"
+id="email"
+placeholder="example@gmail.com"
+required>
+
+</div>
+
+<div class="form-group">
+
+<label>Phone Number</label>
+
+<input
+type="tel"
+id="phone"
+placeholder="08012345678"
+required>
+
+</div>
+
+<div class="form-group">
+
+<label>Mode of Entry</label>
+
+<select id="entryMode" required>
+
+<option value="">Select Mode</option>
+
+<option value="UTME">UTME</option>
+
+<option value="Direct Entry">Direct Entry</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label>Current Level</label>
+
+<select id="level" required>
+
+<option value="">Select Level</option>
+
+<option value="100">100 Level</option>
+
+<option value="200">200 Level</option>
+
+<option value="300">300 Level</option>
+
+<option value="400">400 Level</option>
+
+<option value="500">500 Level</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label>Password</label>
+
+<div class="password-box">
+
+<input
+type="password"
+id="password"
+placeholder="Enter password"
+required>
+
+<i
+class="fa-solid fa-eye toggle-password"
+onclick="togglePassword('password', this)">
+</i>
+
+</div>
+
+</div>
+
+<div class="form-group">
+
+<label>Confirm Password</label>
+
+<div class="password-box">
+
+<input
+type="password"
+id="confirmPassword"
+placeholder="Confirm password"
+required>
+
+<i
+class="fa-solid fa-eye toggle-password"
+onclick="togglePassword('confirmPassword', this)">
+</i>
+
+</div>
+
+</div>
+
+<button
+type="submit"
+class="register-btn">
+
+<i class="fa-solid fa-user-plus"></i>
+
+Create Account
+
+</button>
+
+</form>
+
+<div class="student-preview">
+
+<h3>Student Preview</h3>
+
+<img
+id="previewImage"
+src="images/default-user.svg"
+alt="Preview">
+
+<h4 id="previewName">Your Name</h4>
+
+<p id="previewMatric">Matric Number</p>
+
+<p id="previewLevel">Level</p>
+
+</div>
+
+<p class="login-link">
+
+Already have an account?
+
+<a href="login.html">
+
+Login Here
+
+</a>
+
+</p>
+
+<p class="login-link">
+
+<a href="index.html">
+
+← Back to Home
+
+</a>
+
+</p>
+
+</div>
+
+</section>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+<!-- SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<!-- Firebase -->
+<script src="firebase.js"></script>
+
+<!-- Popup System -->
+<script src="popup.js"></script>
+
+<script src="theme.js"></script>
+
+<!-- Register -->
+<script src="register.js"></script>
+
+
+
+<script src="animations.js"></script>
+</body>
+
+</html>

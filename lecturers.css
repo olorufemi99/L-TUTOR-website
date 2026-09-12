@@ -1,0 +1,112 @@
+
+/* =====================================
+   ACADEMIC STAFF PAGE
+===================================== */
+.page-header{
+padding:80px 8%;
+text-align:center;
+background:linear-gradient(135deg,#ffffff,#f4ebff);
+}
+.page-header h1{font-size:46px;color:#6A1B9A;margin-bottom:15px;}
+.page-header p{font-size:18px;color:#666;max-width:750px;margin:auto;line-height:1.8;}
+
+.search-section{padding:30px 8%;text-align:center;background:#fff;}
+.search-section input{
+width:100%;max-width:500px;padding:16px 25px;border:none;outline:none;
+border-radius:50px;font-size:17px;background:#f3f3f3;
+box-shadow:0 5px 18px rgba(0,0,0,.08);transition:.3s;
+}
+.search-section input:focus{background:#fff;box-shadow:0 8px 25px rgba(106,27,154,.18);}
+
+.lecturer-section{padding:70px 8%;background:#f7f8fc;}
+#lecturerContainer{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:35px;}
+
+.lecturer-card{
+background:#fff;border-radius:20px;overflow:hidden;
+box-shadow:0 12px 30px rgba(0,0,0,.08);transition:.35s;
+}
+.lecturer-card:hover{transform:translateY(-8px);box-shadow:0 18px 45px rgba(106,27,154,.18);}
+
+.lecturer-photo-wrap{
+width:100%;height:360px;background:#f3f3f3;
+display:flex;align-items:center;justify-content:center;overflow:hidden;
+}
+.lecturer-card img{
+width:100%;height:100%;object-fit:contain;display:block;
+}
+
+.lecturer-content{padding:25px;}
+.lecturer-content h2{color:#6A1B9A;font-size:23px;margin:0 0 7px;}
+.rank{font-weight:600;color:#555;margin:0 0 22px;}
+.profile-btn{
+display:inline-block;padding:13px 28px;background:#6A1B9A;color:#fff;
+text-decoration:none;border-radius:40px;font-weight:600;transition:.3s;
+}
+.profile-btn:hover{background:#4A148C;}
+
+.loading{text-align:center;padding:80px;color:#6A1B9A;}
+.loading i{font-size:50px;margin-bottom:20px;}
+
+footer{padding:25px;text-align:center;background:#fff;color:#777;font-size:15px;}
+
+@media(max-width:768px){
+.page-header{padding:55px 7%;}
+.page-header h1{font-size:35px;}
+.page-header p{font-size:16px;}
+.lecturer-section{padding:45px 5%;}
+#lecturerContainer{grid-template-columns:1fr;gap:25px;}
+.lecturer-photo-wrap{height:330px;}
+.lecturer-content{padding:22px;}
+.lecturer-content h2{font-size:21px;}
+}
+
+/* Dark mode */
+body.dark-mode .page-header,html.dark-mode body .page-header{
+background:linear-gradient(135deg,#11131a,#1b1324)!important;
+}
+body.dark-mode .page-header h1,html.dark-mode body .page-header h1{color:var(--text,#fff)!important;}
+body.dark-mode .page-header p,html.dark-mode body .page-header p{color:var(--text2,#cfcfcf)!important;}
+body.dark-mode .search-section,html.dark-mode body .search-section,
+body.dark-mode .lecturer-section,html.dark-mode body .lecturer-section,
+body.dark-mode footer,html.dark-mode body footer{
+background:var(--bg,#11131a)!important;color:var(--text,#fff)!important;
+}
+body.dark-mode .search-section input,html.dark-mode body .search-section input{
+background:var(--surface2,#242938)!important;color:var(--text,#fff)!important;
+border:1px solid var(--border,#31374a)!important;
+}
+body.dark-mode .search-section input::placeholder,html.dark-mode body .search-section input::placeholder{
+color:var(--text2,#cfcfcf)!important;
+}
+body.dark-mode .lecturer-card,html.dark-mode body .lecturer-card{
+background:var(--surface,#1b1f2a)!important;color:var(--text,#fff)!important;
+border:1px solid var(--border,#31374a)!important;
+}
+body.dark-mode .lecturer-photo-wrap,html.dark-mode body .lecturer-photo-wrap{background:#11131a!important;}
+body.dark-mode .lecturer-content h2,html.dark-mode body .lecturer-content h2{color:var(--text,#fff)!important;}
+body.dark-mode .lecturer-content .rank,html.dark-mode body .lecturer-content .rank{color:var(--text2,#cfcfcf)!important;}
+body.dark-mode footer p,html.dark-mode body footer p{color:var(--text2,#cfcfcf)!important;}
+
+/* ==========================================
+   LECTURER PHOTOS — FILL THE ALBUM
+   ========================================== */
+.lecturer-photo-wrap{
+    width:100%;
+    height:360px;
+    background:#f3f3f3;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+}
+.lecturer-card img{
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:cover;
+    object-position:center;
+}
+@media(max-width:768px){
+    .lecturer-photo-wrap{height:330px;}
+    .lecturer-card img{width:100%;height:100%;object-fit:cover;}
+}

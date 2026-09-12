@@ -1,0 +1,92 @@
+/* ==========================================
+   L-TUTOR ADMIN - VIDEO MODULE
+   ========================================== */
+
+.video-admin-module {
+    width: 100%;
+}
+
+.video-admin-module .panel {
+    width: 100%;
+}
+
+.video-admin-module .form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.video-admin-module .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.video-admin-module .form-group label {
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.video-admin-module .form-group input,
+.video-admin-module .form-group select,
+.video-admin-module .form-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px 15px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    outline: none;
+    font-family: inherit;
+}
+
+.video-admin-module .form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.video-admin-module .save-btn {
+    margin-top: 20px;
+}
+
+.video-admin-module .table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.video-admin-module table {
+    width: 100%;
+    min-width: 650px;
+    border-collapse: collapse;
+}
+
+.video-admin-module th {
+    white-space: nowrap;
+}
+
+.video-admin-module td,
+.video-admin-module th {
+    padding: 13px 14px;
+}
+
+.video-admin-module .edit-btn,
+.video-admin-module .delete-btn {
+    border: 0;
+    border-radius: 7px;
+    padding: 8px 12px;
+    margin: 2px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.video-admin-module .edit-btn {
+    background: #7b1fa2;
+}
+
+.video-admin-module .delete-btn {
+    background: #d32f2f;
+}
+
+@media (max-width: 768px) {
+    .video-admin-module .form-grid {
+        grid-template-columns: 1fr;
+    }
+}

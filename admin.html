@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>L-TUTOR Admin Portal</title>
+
+<link rel="stylesheet" href="admin.css">
+<link rel="stylesheet" href="admin-video-tutorials.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="stylesheet" href="final-fixes.css">
+
+</head>
+
+<body>
+
+<button class="admin-mobile-menu-btn" id="adminMobileMenuBtn" type="button" aria-label="Open administrator menu" aria-expanded="false">
+    <i class="fa-solid fa-bars"></i>
+</button>
+<div class="admin-mobile-overlay" id="adminMobileOverlay"></div>
+
+<div class="sidebar" id="adminSidebar">
+
+    <div class="brand">
+
+        <img src="images/logo.png" alt="L-TUTOR Logo">
+
+        <h2>L-TUTOR</h2>
+
+        <p>Administrator Portal</p>
+
+    </div>
+
+    <ul>
+
+        <li class="menu-item active" data-page="dashboard">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            <span>Dashboard</span>
+
+        </li>
+
+        <li class="menu-item" data-page="courses">
+
+            <i class="fa-solid fa-book"></i>
+
+            <span>Course Management</span>
+
+        </li>
+
+        <li class="menu-item" data-page="lecturers">
+
+            <i class="fa-solid fa-chalkboard-user"></i>
+
+            <span>Lecturers</span>
+
+        </li>
+
+        <li class="menu-item" data-page="notes">
+
+            <i class="fa-solid fa-file-lines"></i>
+
+            <span>Lecture Notes</span>
+
+        </li>
+
+        <li class="menu-item" data-page="past">
+
+            <i class="fa-solid fa-file-circle-question"></i>
+
+            <span>Past Questions</span>
+
+        </li>
+
+        <li class="menu-item" data-page="videos">
+
+            <i class="fa-solid fa-video"></i>
+
+            <span>Video Tutorials</span>
+
+        </li>
+
+        <li class="menu-item" data-page="books">
+
+            <i class="fa-solid fa-book-open"></i>
+
+            <span>Recommended Books</span>
+
+        </li>
+
+        <li class="menu-item" data-page="announcements">
+
+            <i class="fa-solid fa-bullhorn"></i>
+
+            <span>Announcements</span>
+
+        </li>
+
+        <li class="menu-item" data-page="news">
+
+            <i class="fa-solid fa-newspaper"></i>
+
+            <span>News</span>
+
+        </li>
+
+        <li class="menu-item" data-page="students">
+
+            <i class="fa-solid fa-users"></i>
+
+            <span>Students</span>
+
+        </li>
+
+        <li class="menu-item" data-page="settings">
+
+            <i class="fa-solid fa-gear"></i>
+
+            <span>Settings</span>
+
+        </li>
+
+        <li id="logoutBtn">
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            <span>Logout</span>
+
+        </li>
+
+    </ul>
+
+</div>
+
+<div class="main-content">
+
+    <header>
+
+        <h1 id="pageTitle">Dashboard</h1>
+
+        <p id="pageSubtitle">Welcome back, Administrator.</p>
+
+    </header>
+
+    <div id="contentArea">
+
+    </div>
+
+</div>
+
+<!-- Firebase -->
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+<!-- SweetAlert2 -->
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<!-- Firebase Config -->
+
+<script src="firebase.js"></script>
+<script src="admin-guard.js"></script>
+
+<script src="cloudinary.js"></script>
+
+<script src="upload.js"></script>
+
+<!-- Popup System -->
+
+<script src="popup.js"></script>
+<script src="admin-preview.js"></script>
+
+<!-- Modules -->
+
+<script src="modules/courses.js"></script>
+
+<script src="modules/lecturers.js"></script>
+
+<script src="modules/lecture-notes.js"></script>
+
+<script src="modules/past-questions.js"></script>
+
+<script src="modules/videos.js"></script>
+
+<script src="modules/books.js"></script>
+
+<script src="modules/announcements.js"></script>
+<script src="modules/news.js"></script>
+
+<script src="modules/students.js"></script>
+
+<script src="modules/settings.js"></script>
+
+<!-- Controller -->
+<script src="admin-helper.js"></script>
+  
+<script src="admin.js"></script>
+<script src="admin-mobile-menu.js"></script>
+
+</body>
+
+</html>

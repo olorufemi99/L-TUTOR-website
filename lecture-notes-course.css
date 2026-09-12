@@ -1,0 +1,410 @@
+/* ==========================================
+   L-TUTOR COURSE LECTURE NOTES
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+    color:#333;
+}
+
+
+/* ==========================================
+   TOP BAR
+========================================== */
+
+.topbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 30px;
+    background:#fff;
+    box-shadow:0 3px 12px rgba(0,0,0,.08);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    width:45px;
+    height:45px;
+    object-fit:contain;
+}
+
+.logo h2{
+    font-size:25px;
+    color:#6A1B9A;
+    font-weight:700;
+}
+
+.back-btn{
+    text-decoration:none;
+    background:#6A1B9A;
+    color:#fff;
+    padding:10px 22px;
+    border-radius:30px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.back-btn:hover{
+    background:#4A148C;
+}
+
+
+/* ==========================================
+   PAGE
+========================================== */
+
+.course-notes-page{
+    padding:45px 8% 70px;
+}
+
+
+/* ==========================================
+   COURSE HEADER
+========================================== */
+
+.course-header{
+    max-width:900px;
+    margin:0 auto 35px;
+    padding:40px 25px;
+    text-align:center;
+    background:#fff;
+    border-radius:22px;
+    box-shadow:0 8px 25px rgba(0,0,0,.07);
+}
+
+.course-icon{
+    width:70px;
+    height:70px;
+    margin:0 auto 18px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#F3E5F5;
+    color:#6A1B9A;
+    border-radius:20px;
+    font-size:28px;
+}
+
+.course-code{
+    color:#6A1B9A;
+    font-size:15px;
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+.course-header h1{
+    margin:8px 0;
+    color:#222;
+    font-size:32px;
+}
+
+.course-header p{
+    color:#666;
+    font-size:14px;
+}
+
+
+/* ==========================================
+   NOTES CONTAINER
+========================================== */
+
+.notes-container{
+    max-width:1000px;
+    margin:auto;
+}
+
+.notes-heading{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:20px;
+}
+
+.notes-heading h2{
+    color:#6A1B9A;
+    font-size:22px;
+}
+
+.notes-heading h2 i{
+    margin-right:7px;
+}
+
+.notes-heading span{
+    color:#777;
+    font-size:14px;
+}
+
+
+/* ==========================================
+   NOTE CARD
+========================================== */
+
+.notes-list{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.note-card{
+    display:flex;
+    align-items:flex-start;
+    gap:20px;
+    background:#fff;
+    padding:25px;
+    border-left:6px solid #6A1B9A;
+    border-radius:16px;
+    box-shadow:0 8px 20px rgba(0,0,0,.07);
+    animation:noteAppear .55s ease both;
+    transition:.3s;
+}
+
+.note-card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 12px 28px rgba(106,27,154,.11);
+}
+
+.note-icon{
+    flex-shrink:0;
+    width:58px;
+    height:58px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#F3E5F5;
+    color:#6A1B9A;
+    border-radius:16px;
+    font-size:25px;
+}
+
+.note-content{
+    flex:1;
+    min-width:0;
+}
+
+.note-content h3{
+    color:#6A1B9A;
+    font-size:19px;
+    margin-bottom:7px;
+}
+
+.note-description{
+    color:#666;
+    font-size:13px;
+    line-height:1.6;
+    margin-bottom:12px;
+}
+
+.note-meta{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px 18px;
+    color:#777;
+    font-size:12px;
+}
+
+.note-meta span{
+    display:inline-flex;
+    align-items:center;
+    gap:5px;
+}
+
+.note-meta i{
+    color:#6A1B9A;
+}
+
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.note-actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:18px;
+}
+
+.view-btn,
+.download-btn,
+.unavailable-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:7px;
+    padding:10px 18px;
+    border-radius:25px;
+    text-decoration:none;
+    font-size:13px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.view-btn{
+    background:#6A1B9A;
+    color:#fff;
+}
+
+.view-btn:hover{
+    background:#4A148C;
+    transform:translateY(-2px);
+}
+
+.download-btn{
+    background:#F3E5F5;
+    color:#6A1B9A;
+}
+
+.download-btn:hover{
+    background:#E8D5ED;
+    transform:translateY(-2px);
+}
+
+.unavailable-btn{
+    background:#eee;
+    color:#777;
+}
+
+
+/* ==========================================
+   LOADING
+========================================== */
+
+.loading-box{
+    min-height:250px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    gap:12px;
+    color:#6A1B9A;
+}
+
+.loading-box i{
+    font-size:35px;
+}
+
+.loading-box p{
+    color:#666;
+}
+
+.error-box{
+    background:#fff;
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 8px 20px rgba(0,0,0,.06);
+}
+
+.back-course-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:7px;
+    margin-top:10px;
+    padding:11px 20px;
+    border-radius:25px;
+    background:#6A1B9A;
+    color:#fff;
+    text-decoration:none;
+    font-weight:600;
+}
+
+
+/* ==========================================
+   ANIMATION
+========================================== */
+
+@keyframes noteAppear{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media(max-width:768px){
+
+    .topbar{
+        padding:15px;
+    }
+
+    .logo h2{
+        font-size:22px;
+    }
+
+    .logo img{
+        width:38px;
+        height:38px;
+    }
+
+    .back-btn{
+        padding:9px 15px;
+        font-size:13px;
+    }
+
+    .course-notes-page{
+        padding:30px 20px 50px;
+    }
+
+    .course-header{
+        padding:30px 18px;
+    }
+
+    .course-header h1{
+        font-size:25px;
+    }
+
+    .note-card{
+        flex-direction:column;
+        padding:20px;
+    }
+
+    .note-icon{
+        width:52px;
+        height:52px;
+        font-size:22px;
+    }
+
+    .note-actions{
+        width:100%;
+    }
+
+    .view-btn,
+    .download-btn{
+        flex:1;
+    }
+
+    .notes-heading{
+        align-items:flex-start;
+        gap:10px;
+        flex-direction:column;
+    }
+
+}
+/* Global logo safeguard */
+.logo img{width:32px !important;height:32px !important;max-width:32px !important;max-height:32px !important;object-fit:contain !important;display:block !important;}

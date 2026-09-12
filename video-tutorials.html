@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>L-TUTOR | Video Tutorials</title>
+
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="video-tutorials.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<header class="topbar">
+    <div class="logo">
+        <img src="images/logo.png" alt="L-TUTOR">
+        <h2>L-TUTOR</h2>
+    </div>
+
+    <a href="dashboard.html" class="back-btn">
+        <i class="fa-solid fa-arrow-left"></i>
+        Dashboard
+    </a>
+</header>
+
+<main class="video-library">
+
+    <div class="video-header">
+        <h1>Video Tutorials</h1>
+        <p>Watch departmental video tutorials.</p>
+    </div>
+
+    <div class="video-search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input
+            type="search"
+            id="videoSearch"
+            placeholder="Search videos..."
+            autocomplete="off"
+            oninput="searchStudentVideos()">
+    </div>
+
+    <div id="videosContainer" class="videos-grid"></div>
+
+</main>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+<script src="firebase.js"></script>
+<script src="theme.js"></script>
+<script src="animations.js"></script>
+<script src="video-tutorials.js"></script>
+
+</body>
+</html>

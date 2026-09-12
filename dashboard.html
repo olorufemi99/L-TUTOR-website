@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff" id="ltThemeColor">
+<meta name="color-scheme" content="light dark">
+
+<title>L-TUTOR Student Dashboard</title>
+
+<link rel="stylesheet" href="theme.css"> 
+<link rel="stylesheet" href="dashboard.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  
+
+<link rel="stylesheet" href="final-fixes.css">
+
+<link rel="stylesheet" href="mobile-nav.css">
+</head>
+
+<body>
+
+<header class="topbar">
+
+<div class="logo">
+
+<img src="images/logo.png" alt="L-TUTOR Logo">
+
+<h2>L-TUTOR</h2>
+
+</div>
+
+<button class="logout-btn" onclick="logout()">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+Logout
+
+</button>
+
+</header>
+
+<div class="dashboard">
+
+<h1>Student Dashboard</h1>
+
+<p id="welcome">Welcome Student</p>
+
+<div class="cards">
+
+<a href="courses.html" class="card" onclick="clearBadge('courses')">
+<span class="badge" id="courseBadge"></span>
+<i class="fa-solid fa-book"></i>
+<h3>Courses</h3>
+</a>
+
+<a href="lecture-notes.html" class="card">
+<i class="fa-solid fa-file-lines"></i>
+<h3>Lecture Notes</h3>
+</a>
+
+<a href="past-questions.html" class="card">
+<i class="fa-solid fa-file-circle-question"></i>
+<h3>Past Questions</h3>
+</a>
+
+<a href="video-tutorials.html" class="card" onclick="clearBadge('videos')">
+<span class="badge" id="videoBadge"></span>
+<i class="fa-solid fa-video"></i>
+<h3>Video Tutorials</h3>
+</a>
+
+<a href="books.html" class="card" onclick="clearBadge('books')">
+<span class="badge" id="bookBadge"></span>
+<i class="fa-solid fa-book-open"></i>
+<h3>Books</h3>
+</a>
+
+<a href="announcements.html" class="card" onclick="clearBadge('announcements')">
+<span class="badge" id="announcementBadge"></span>
+<i class="fa-solid fa-bullhorn"></i>
+<h3>Announcements</h3>
+</a>
+
+<a href="lecturers.html" class="card" onclick="clearBadge('lecturers')">
+<span class="badge" id="staffBadge"></span>
+<i class="fa-solid fa-chalkboard-user"></i>
+<h3>Academic Staff</h3>
+</a>
+
+<a href="profile.html" class="card">
+<i class="fa-solid fa-user"></i>
+<h3>Profile</h3>
+</a>
+
+  <a href="settings.html" class="card">
+    <i class="fa-solid fa-gear"></i>
+    <h3>Settings</h3>
+  </a>
+  
+
+</div>
+
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+<!-- SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<!-- Firebase -->
+<script src="firebase.js"></script>
+<script src="auth-guard.js"></script>
+
+<!-- Popup System -->
+<script src="popup.js"></script>
+
+<script src="theme.js"></script>
+  
+<!-- Dashboard -->
+<script src="dashboard.js"></script>
+
+<script src="animations.js"></script>
+<script src="mobile-nav.js"></script>
+</body>
+</html>

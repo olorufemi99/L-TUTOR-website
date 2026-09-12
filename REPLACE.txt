@@ -1,0 +1,7 @@
+Replace these three files in your existing L-TUTOR project:
+
+1. lecturers.css
+2. news.css
+3. style.css
+
+This fix only changes image sizing: lecturer and news photos keep their full aspect ratio and are no longer cropped, squeezed, or shown with empty letterbox space.

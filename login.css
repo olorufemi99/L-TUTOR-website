@@ -1,0 +1,933 @@
+/* =====================================
+   L-TUTOR LOGIN
+===================================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+
+background:#f5f6fa;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+min-height:100vh;
+
+padding:20px;
+
+}
+
+/* ========================= */
+
+.login-container{
+
+width:100%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+/* ========================= */
+
+.login-card{
+
+width:100%;
+max-width:480px;
+
+background:#fff;
+
+padding:45px 40px;
+
+border-radius:20px;
+
+box-shadow:0 15px 40px rgba(0,0,0,.10);
+
+animation:fadeUp .6s ease;
+
+}
+
+/* ========================= */
+
+.logo{
+
+display:block;
+
+width:75px;
+
+margin:0 auto 15px;
+
+}
+
+/* ========================= */
+
+.login-card h1{
+
+text-align:center;
+
+font-size:30px;
+
+font-weight:700;
+
+color:#6A1B9A;
+
+margin-bottom:35px;
+
+letter-spacing:1px;
+
+}
+
+/* ========================= */
+/* INPUT BOX */
+/* ========================= */
+
+.input-box{
+
+position:relative;
+
+margin-bottom:25px;
+
+}
+
+.input-box input{
+
+width:100%;
+
+height:65px;
+
+padding:0 65px;
+
+border:3px solid #E8D9F7;
+
+border-radius:50px;
+
+background:#fff;
+
+font-size:18px;
+
+color:#333;
+
+transition:.3s;
+
+}
+
+.input-box input::placeholder{
+
+color:#999;
+
+font-size:17px;
+
+}
+
+.input-box input:focus{
+
+outline:none;
+
+border-color:#6A1B9A;
+
+box-shadow:0 0 12px rgba(106,27,154,.15);
+
+}
+
+.input-box .fa-envelope,
+.input-box .fa-lock{
+
+position:absolute;
+
+left:24px;
+
+top:50%;
+
+transform:translateY(-50%);
+
+font-size:22px;
+
+color:#6A1B9A;
+
+}
+
+.toggle-password{
+
+position:absolute;
+
+right:24px;
+
+top:50%;
+
+transform:translateY(-50%);
+
+font-size:20px;
+
+cursor:pointer;
+
+color:#888;
+
+transition:.3s;
+
+}
+
+.toggle-password:hover{
+
+color:#6A1B9A;
+
+}
+/* ========================= */
+/* REMEMBER ME */
+/* ========================= */
+
+.remember{
+
+display:flex;
+
+align-items:center;
+
+margin-bottom:25px;
+
+font-size:15px;
+
+color:#555;
+
+}
+
+.remember label{
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+cursor:pointer;
+
+}
+
+.remember input{
+
+accent-color:#6A1B9A;
+
+width:18px;
+
+height:18px;
+
+}
+
+/* ========================= */
+/* LOGIN BUTTON */
+/* ========================= */
+
+.login-btn{
+
+width:100%;
+
+height:58px;
+
+background:#6A1B9A;
+
+color:#fff;
+
+border:none;
+
+border-radius:50px;
+
+font-size:17px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.login-btn i{
+
+margin-right:8px;
+
+}
+
+.login-btn:hover{
+
+background:#53127A;
+
+transform:translateY(-2px);
+
+box-shadow:0 8px 18px rgba(106,27,154,.25);
+
+}
+
+/* ========================= */
+/* FORGOT PASSWORD */
+/* ========================= */
+
+.forgot{
+
+display:block;
+
+text-align:center;
+
+margin:18px 0 25px;
+
+text-decoration:none;
+
+font-size:15px;
+
+font-weight:500;
+
+color:#6A1B9A;
+
+transition:.3s;
+
+}
+
+.forgot:hover{
+
+text-decoration:underline;
+
+}
+
+/* ========================= */
+/* DIVIDER */
+/* ========================= */
+
+.divider{
+
+display:flex;
+
+align-items:center;
+
+margin:25px 0;
+
+}
+
+.divider::before,
+.divider::after{
+
+content:"";
+
+flex:1;
+
+height:1px;
+
+background:#ddd;
+
+}
+
+.divider span{
+
+padding:0 15px;
+
+font-size:14px;
+
+color:#888;
+
+font-weight:500;
+
+}
+
+/* ========================= */
+/* REGISTER BUTTON */
+/* ========================= */
+
+.register-btn{
+
+display:block;
+
+width:100%;
+
+text-align:center;
+
+padding:15px;
+
+border:2px solid #6A1B9A;
+
+border-radius:50px;
+
+text-decoration:none;
+
+font-size:16px;
+
+font-weight:600;
+
+color:#6A1B9A;
+
+transition:.3s;
+
+margin-bottom:20px;
+
+}
+
+.register-btn i{
+
+margin-right:8px;
+
+}
+
+.register-btn:hover{
+
+background:#6A1B9A;
+
+color:#fff;
+
+}
+
+/* ========================= */
+/* BACK HOME */
+/* ========================= */
+
+.back-home{
+
+display:block;
+
+text-align:center;
+
+text-decoration:none;
+
+font-size:15px;
+
+color:#666;
+
+transition:.3s;
+
+}
+
+.back-home:hover{
+
+color:#6A1B9A;
+
+}
+
+/* ========================= */
+/* ANIMATION */
+/* ========================= */
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(25px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media(max-width:600px){
+
+.login-card{
+
+padding:35px 22px;
+
+}
+
+.logo{
+
+width:90px;
+
+}
+
+.login-card h1{
+
+font-size:25px;
+
+margin-bottom:28px;
+
+}
+
+.input-box input{
+
+height:60px;
+
+font-size:16px;
+
+padding:0 58px;
+
+}
+
+.input-box input::placeholder{
+
+font-size:16px;
+
+}
+
+.login-btn{
+
+height:55px;
+
+}
+
+.register-btn{
+
+padding:14px;
+
+}
+
+}
+
+/* =====================================
+   STUDENT / ADMIN 3D LOGIN SWITCH
+===================================== */
+
+.login-scene{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    perspective:1400px;
+    position:relative;
+}
+
+.login-flipper{
+    width:100%;
+    max-width:480px;
+    position:relative;
+    transform-style:preserve-3d;
+    transition:transform .75s cubic-bezier(.2,.75,.25,1);
+}
+
+.login-flipper.is-admin{
+    transform:rotateY(180deg);
+}
+
+.login-face{
+    width:100%;
+    backface-visibility:hidden;
+    -webkit-backface-visibility:hidden;
+}
+
+.login-front{
+    position:relative;
+    z-index:2;
+}
+
+.login-back{
+    position:absolute;
+    inset:0;
+    transform:rotateY(180deg);
+    display:flex;
+    align-items:center;
+}
+
+.login-switch{
+    position:absolute;
+    top:-22px;
+    right:-18px;
+    z-index:20;
+    width:52px;
+    height:52px;
+    border:0;
+    border-radius:50%;
+    background:#6A1B9A;
+    color:#fff;
+    box-shadow:0 10px 24px rgba(106,27,154,.28);
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:20px;
+    transition:transform .25s ease, background .25s ease;
+}
+
+.login-switch:hover{
+    transform:scale(1.07);
+    background:#53127A;
+}
+
+.login-switch:active{
+    transform:scale(.95);
+}
+
+.admin-subtitle{
+    text-align:center;
+    color:#666;
+    font-size:14px;
+    margin:-20px 0 28px;
+}
+
+.admin-card .login-btn{
+    text-transform:uppercase;
+}
+
+@media(max-width:600px){
+    .login-switch{
+        top:-14px;
+        right:4px;
+        width:48px;
+        height:48px;
+        font-size:18px;
+    }
+
+    .login-flipper{
+        max-width:480px;
+    }
+
+    .login-back{
+        align-items:stretch;
+    }
+}
+
+
+/* --- L-TUTOR login flip/eye positioning refinement --- */
+.login-board,
+.login-card,
+.auth-card,
+.login-container {
+    position: relative;
+}
+
+/* Refined switch: attached to the top edge of the login board */
+.login-switch,
+.flip-login,
+.flip-toggle,
+.login-flip-toggle,
+.switch-login {
+    position: absolute !important;
+    top: 14px !important;
+    right: 14px !important;
+    left: auto !important;
+    z-index: 20 !important;
+    margin: 0 !important;
+    width: 42px !important;
+    height: 42px !important;
+    border-radius: 50% !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    border: 1px solid rgba(99, 70, 160, .18) !important;
+    background: rgba(255,255,255,.96) !important;
+    box-shadow: 0 5px 16px rgba(0,0,0,.10) !important;
+    transition: transform .28s ease, box-shadow .28s ease, background .28s ease !important;
+}
+
+.login-switch:hover,
+.flip-login:hover,
+.flip-toggle:hover,
+.login-flip-toggle:hover,
+.switch-login:hover {
+    transform: translateY(-2px) rotate(12deg) !important;
+    box-shadow: 0 8px 20px rgba(0,0,0,.14) !important;
+}
+
+.login-switch i,
+.flip-login i,
+.flip-toggle i,
+.login-flip-toggle i,
+.switch-login i {
+    pointer-events: none !important;
+}
+
+/* Make the password visibility button sit inside the input */
+.password-field,
+.password-wrapper,
+.input-password,
+.password-container {
+    position: relative !important;
+}
+
+.password-field input,
+.password-wrapper input,
+.input-password input,
+.password-container input {
+    width: 100% !important;
+    padding-right: 48px !important;
+    box-sizing: border-box !important;
+}
+
+.password-field .password-toggle,
+.password-field .toggle-password,
+.password-wrapper .password-toggle,
+.password-wrapper .toggle-password,
+.input-password .password-toggle,
+.input-password .toggle-password,
+.password-container .password-toggle,
+.password-container .toggle-password,
+.password-field button[type="button"],
+.password-wrapper button[type="button"] {
+    position: absolute !important;
+    right: 12px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    margin: 0 !important;
+    width: 30px !important;
+    height: 30px !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 5 !important;
+    cursor: pointer !important;
+}
+
+@media (max-width: 600px) {
+    .login-switch,
+    .flip-login,
+    .flip-toggle,
+    .login-flip-toggle,
+    .switch-login {
+        top: 10px !important;
+        right: 10px !important;
+        width: 38px !important;
+        height: 38px !important;
+    }
+}
+
+/* =====================================
+   FINAL LOGIN UI FIXES
+   - switch is attached to the login board
+   - admin password eye stays inside its field
+   - both login faces keep a consistent board size
+===================================== */
+.login-scene {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1400px;
+    position: relative;
+}
+
+.login-board-shell {
+    width: min(100%, 480px);
+    position: relative;
+    margin: 0 auto;
+}
+
+.login-flipper {
+    width: 100%;
+    max-width: none;
+    min-height: 560px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform .8s cubic-bezier(.2,.75,.25,1);
+}
+
+.login-face {
+    width: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.login-front {
+    position: relative;
+    z-index: 2;
+}
+
+.login-back {
+    position: absolute;
+    inset: 0;
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: flex-start;
+}
+
+.login-flipper.is-admin {
+    transform: rotateY(180deg);
+}
+
+/* Polished switch, physically attached to the top-right of the board */
+.login-switch {
+    position: absolute !important;
+    top: 14px !important;
+    right: 14px !important;
+    left: auto !important;
+    z-index: 50 !important;
+    width: 42px !important;
+    height: 42px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: 1px solid rgba(255,255,255,.35) !important;
+    border-radius: 14px !important;
+    background: linear-gradient(145deg, #8e24aa, #6a1b9a) !important;
+    color: #fff !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 8px 20px rgba(106,27,154,.30), inset 0 1px 1px rgba(255,255,255,.25) !important;
+    cursor: pointer !important;
+    transform: none !important;
+    transition: transform .25s ease, box-shadow .25s ease, filter .25s ease !important;
+}
+
+.login-switch::after {
+    content: "";
+    position: absolute;
+    inset: 4px;
+    border: 1px solid rgba(255,255,255,.20);
+    border-radius: 10px;
+    pointer-events: none;
+}
+
+.login-switch .switch-icon {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+.login-switch i {
+    font-size: 17px !important;
+    line-height: 1 !important;
+    pointer-events: none !important;
+}
+
+.login-switch:hover {
+    transform: translateY(-2px) scale(1.04) !important;
+    filter: brightness(1.08);
+    box-shadow: 0 11px 24px rgba(106,27,154,.36), inset 0 1px 1px rgba(255,255,255,.25) !important;
+}
+
+.login-switch:active {
+    transform: scale(.94) !important;
+}
+
+/* Keep the password eye INSIDE the input, including the admin field. */
+.input-box {
+    position: relative !important;
+}
+
+.input-box input[type="password"],
+.input-box input[type="text"] {
+    padding-right: 58px !important;
+}
+
+.input-box .toggle-password,
+.input-box .admin-toggle-password {
+    position: absolute !important;
+    right: 20px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    width: 30px !important;
+    height: 30px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 10 !important;
+    color: #888 !important;
+    cursor: pointer !important;
+    line-height: 1 !important;
+}
+
+.input-box .toggle-password:hover,
+.input-box .admin-toggle-password:hover {
+    color: #6a1b9a !important;
+}
+
+/* Equal visual board dimensions without stretching the form on small screens. */
+.login-card {
+    width: 100%;
+    min-height: 560px;
+}
+
+.admin-card {
+    min-height: 560px;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 16px;
+    }
+
+    .login-board-shell {
+        width: min(100%, 430px);
+    }
+
+    .login-flipper {
+        min-height: 0;
+    }
+
+    .login-card,
+    .admin-card {
+        min-height: 0;
+    }
+
+    .login-switch {
+        top: 12px !important;
+        right: 12px !important;
+        width: 40px !important;
+        height: 40px !important;
+        border-radius: 13px !important;
+    }
+
+    .login-switch i {
+        font-size: 16px !important;
+    }
+}
+
+/* ==========================================================
+   ADMIN FACE POSITION FIX
+   Keep the admin login board centered exactly like the student face.
+========================================================== */
+.login-flipper {
+    display: grid !important;
+    align-items: stretch !important;
+}
+
+.login-face {
+    grid-area: 1 / 1 !important;
+}
+
+.login-front {
+    align-self: start !important;
+}
+
+.login-back {
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    min-height: 560px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.login-back .admin-card {
+    width: 100% !important;
+    max-width: 480px !important;
+    margin: 0 auto !important;
+    align-self: center !important;
+}
+
+@media (max-width: 600px) {
+    .login-back {
+        min-height: 0 !important;
+        align-items: center !important;
+    }
+
+    .login-back .admin-card {
+        width: 100% !important;
+        max-width: 430px !important;
+        margin: 0 auto !important;
+    }
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff" id="ltThemeColor">
+<meta name="color-scheme" content="light dark">
+
+<title>L-TUTOR | Announcements</title>
+
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="announcements.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="stylesheet" href="final-fixes.css">
+
+<link rel="stylesheet" href="mobile-nav.css">
+</head>
+
+<body>
+
+<header class="topbar">
+
+<div class="logo">
+
+<img src="images/logo.png">
+
+<h2>L-TUTOR</h2>
+
+</div>
+
+<a href="dashboard.html" class="back-btn">
+
+<i class="fa-solid fa-arrow-left"></i>
+
+Dashboard
+
+</a>
+
+</header>
+
+<section class="announcement-page">
+
+<h1>Announcements</h1>
+
+<p>Latest departmental updates.</p>
+
+<input
+
+type="text"
+
+id="searchAnnouncement"
+
+placeholder="Search announcements..."
+
+onkeyup="searchAnnouncements()">
+
+<div
+
+id="announcementContainer"
+
+class="announcement-grid">
+
+</div>
+
+</section>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+<script src="firebase.js"></script>
+<script src="auth-guard.js"></script>
+
+<script src="theme.js"></script>
+
+<script src="announcements.js"></script>
+
+<script src="animations.js"></script>
+<script src="mobile-nav.js"></script>
+</body>
+
+</html>

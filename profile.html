@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff" id="ltThemeColor">
+<meta name="color-scheme" content="light dark">
+
+<title>My Profile | L-TUTOR</title>
+
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="profile.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="stylesheet" href="final-fixes.css">
+
+<link rel="stylesheet" href="mobile-nav.css">
+</head>
+
+<body>
+
+<header class="topbar">
+
+<a href="dashboard.html" class="back-btn">
+
+<i class="fa-solid fa-arrow-left"></i>
+
+Back
+
+</a>
+
+<div class="page-title">
+<h2>Student Profile</h2>
+<p>Manage your personal information</p>
+</div>
+
+</header>
+
+<div class="profile-container">
+
+<div class="profile-card">
+
+<div class="profile-image">
+
+<img
+id="studentPhoto"
+src="images/default-user.svg"
+class="profile-photo"
+alt="Student Passport">
+
+
+<label class="profile-upload-btn" for="profilePhotoInput">
+    <i class="fa-solid fa-camera"></i>
+    Change Photo
+</label>
+<input
+    type="file"
+    id="profilePhotoInput"
+    accept="image/*"
+    hidden
+    onchange="handleProfilePhoto(this)">
+<div id="profileUploadStatus" class="profile-upload-status"></div>
+
+</div>
+
+<h2 id="studentName">
+
+Loading...
+
+</h2>
+
+<p id="studentMatric">
+
+Loading...
+
+</p>
+<div class="student-status">
+
+<span id="statusBadge">
+
+Active
+
+</span>
+
+</div>
+  
+<button
+class="edit-btn"
+onclick="editProfile()">
+
+<i class="fa-solid fa-user-pen"></i>
+
+Edit Profile
+
+</button>
+
+</div>
+
+<div class="details-card">
+
+<h3>
+
+<i class="fa-solid fa-address-card"></i>
+
+Personal Information
+
+</h3>
+
+<table>
+
+<tr>
+
+<th>Full Name</th>
+
+<td id="fullname">Loading...</td>
+
+</tr>
+
+<tr>
+
+<th>Matric Number</th>
+
+<td id="matricNumber">Loading...</td>
+
+</tr>
+
+<tr>
+
+<th>Email</th>
+
+<td id="email">Loading...</td>
+
+</tr>
+
+<tr>
+
+<th>Phone</th>
+
+<td id="phone">Loading...</td>
+
+</tr>
+
+<tr>
+
+<th>Department</th>
+
+<td id="department">Loading...</td>
+
+</tr>
+
+<tr>
+
+<th>Faculty</th>
+
+<td id="faculty">Loading...</td>
+
+</tr>
+
+<tr>
+
+<th>Level</th>
+
+<td id="level">Loading...</td>
+
+</tr>
+
+<tr>
+
+<th>Mode of Entry</th>
+
+<td id="modeOfEntry">Loading...</td>
+
+</tr>
+
+<tr>
+
+<th>Admission Year</th>
+
+<td id="admissionYear">Loading...</td>
+
+</tr>
+
+<tr>
+
+<th>Status</th>
+
+<td id="status">Loading...</td>
+
+</tr>
+
+</table>
+
+<div class="profile-actions">
+
+<button
+class="save-btn"
+onclick="changePassword()">
+
+<i class="fa-solid fa-key"></i>
+
+Change Password
+
+</button>
+
+<button
+class="logout-btn"
+onclick="logout()">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+Logout
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script src="firebase.js"></script>
+<script src="auth-guard.js"></script>
+
+<script src="popup.js"></script>
+<script src="cloudinary.js"></script>
+<script src="upload.js"></script>
+  
+<script src="theme.js"></script>
+  
+<script src="profile.js"></script>
+
+
+
+<script src="animations.js"></script>
+<script src="mobile-nav.js"></script>
+</body>
+
+</html>

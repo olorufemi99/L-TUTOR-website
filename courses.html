@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+>
+
+<title>Courses | L-TUTOR</title>
+
+<link rel="stylesheet" href="theme.css">
+
+<link rel="stylesheet" href="courses.css">
+
+<link
+href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet"
+>
+
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+>
+
+<link rel="stylesheet" href="final-fixes.css">
+
+<link rel="stylesheet" href="mobile-nav.css">
+</head>
+
+
+<body>
+
+
+<header class="topbar">
+
+    <div class="logo">
+
+        <img
+        src="images/logo.png"
+        alt="L-TUTOR Logo"
+        >
+
+        <h2>L-TUTOR</h2>
+
+    </div>
+
+
+    <a
+    href="dashboard.html"
+    class="back-btn"
+    aria-label="Return to Dashboard"
+>
+    <i class="fa-solid fa-arrow-left"></i>
+    <span>Dashboard</span>
+</a>
+</header>
+
+
+
+<section class="courses">
+
+
+    <div class="page-heading">
+
+        <h1>
+            Departmental Courses
+        </h1>
+
+        <p>
+            Courses currently available on L-TUTOR.
+        </p>
+
+    </div>
+
+
+
+    <!-- SEARCH -->
+
+    <div class="course-search">
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+        <input
+        type="text"
+        id="courseSearch"
+        placeholder="Search course code or title..."
+        >
+
+    </div>
+
+
+
+    <!-- FILTER -->
+
+    <div class="course-filter">
+
+        <select id="levelFilter">
+
+            <option value="All">
+                All Levels
+            </option>
+
+            <option value="100 Level">
+                100 Level
+            </option>
+
+            <option value="200 Level">
+                200 Level
+            </option>
+
+            <option value="300 Level">
+                300 Level
+            </option>
+
+            <option value="400 Level">
+                400 Level
+            </option>
+
+        </select>
+
+
+        <select id="semesterFilter">
+
+            <option value="All">
+                All Semesters
+            </option>
+
+            <option value="First Semester">
+                First Semester
+            </option>
+
+            <option value="Second Semester">
+                Second Semester
+            </option>
+
+        </select>
+
+    </div>
+
+
+
+    <!-- COURSE COUNT -->
+
+    <div
+    id="courseInfo"
+    class="course-info"
+    >
+
+        Loading courses...
+
+    </div>
+
+
+
+    <!-- COURSES -->
+
+    <div
+    class="course-list"
+    id="courseList"
+    >
+
+        <div class="course-loading">
+
+            <i
+            class="fa-solid fa-spinner fa-spin"
+            ></i>
+
+            <p>
+                Loading courses...
+            </p>
+
+        </div>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- FIREBASE -->
+
+<script
+src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"
+></script>
+
+<script
+src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"
+></script>
+
+<script
+src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"
+></script>
+
+
+
+<!-- SWEET ALERT -->
+
+<script
+src="https://cdn.jsdelivr.net/npm/sweetalert2@11"
+></script>
+
+
+
+<!-- FIREBASE CONFIG -->
+
+<script src="firebase.js"></script>
+<script src="auth-guard.js"></script>
+
+
+<!-- POPUP -->
+
+<script src="popup.js"></script>
+
+
+<!-- THEME -->
+
+<script src="theme.js"></script>
+
+
+<!-- COURSE SYSTEM -->
+
+<script src="courses.js"></script>
+
+
+<script src="animations.js"></script>
+<script src="mobile-nav.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,511 @@
+/* ==========================================================
+   L-TUTOR FINAL UI FIXES
+   Safe overrides for mobile, desktop-mode, dark mode and logo.
+========================================================== */
+
+html, body {
+  width: 100%;
+  min-width: 0;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html { background: var(--bg, #f6f2ff) !important; }
+body {
+  min-height: 100vh !important;
+  overflow-x: hidden !important;
+  background: var(--bg, #f6f2ff) !important;
+  color: var(--text, #222) !important;
+}
+
+/* ---------- LOGO: never crop the circular asset ---------- */
+.logo img,
+.navbar .logo img,
+.topbar .logo img,
+.public-brand img,
+.public-mobile-brand img,
+.mobile-logo img {
+  object-fit: contain !important;
+  object-position: center center !important;
+  background: transparent !important;
+  border-radius: 50% !important;
+  display: block !important;
+  flex: 0 0 auto !important;
+}
+
+/* Normal compact sizes */
+.public-brand img { width: 44px !important; height: 44px !important; }
+.public-mobile-brand img { width: 40px !important; height: 40px !important; }
+.topbar .logo img,
+.navbar .logo img,
+.mobile-logo img { width: 40px !important; height: 40px !important; }
+
+/* If the login page uses <img class="logo"> directly. */
+.login-card > img.logo,
+.login-container img.logo {
+  width: 82px !important;
+  height: 82px !important;
+  max-width: 82px !important;
+  max-height: 82px !important;
+  object-fit: contain !important;
+}
+
+/* ---------- PUBLIC MOBILE NAV ---------- */
+.public-header {
+  position: sticky !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  z-index: 10000 !important;
+}
+
+.public-mobile-nav {
+  width: 100% !important;
+  height: 70px !important;
+  min-height: 70px !important;
+  padding: 8px 18px !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+  display: none !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  background: var(--surface) !important;
+  color: var(--text) !important;
+  border-bottom: 1px solid var(--border) !important;
+}
+
+.public-mobile-brand {
+  min-width: 0 !important;
+  max-width: calc(100% - 58px) !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 9px !important;
+  color: var(--text) !important;
+  text-decoration: none !important;
+}
+
+.public-mobile-brand span {
+  color: var(--text) !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  font-size: 22px !important;
+  font-weight: 800 !important;
+}
+
+.public-menu-button {
+  flex: 0 0 46px !important;
+  width: 46px !important;
+  height: 46px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  color: var(--text) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-direction: column !important;
+  gap: 5px !important;
+}
+.public-menu-button span {
+  width: 29px !important;
+  height: 3px !important;
+  border-radius: 99px !important;
+  background: var(--text) !important;
+}
+
+.public-mobile-menu {
+  position: fixed !important;
+  left: 0 !important;
+  right: 0 !important;
+  top: 70px !important;
+  z-index: 9999 !important;
+  background: var(--surface) !important;
+  color: var(--text) !important;
+  border-bottom: 1px solid var(--border) !important;
+}
+
+.public-mobile-menu a,
+.public-mobile-menu a:visited {
+  color: var(--text) !important;
+}
+
+@media (max-width: 768px) {
+  .public-desktop-nav { display: none !important; }
+  .public-mobile-nav { display: flex !important; }
+  .public-mobile-menu { display: block !important; }
+}
+@media (min-width: 769px) {
+  .public-mobile-nav,
+  .public-mobile-menu { display: none !important; }
+}
+
+/* ---------- DARK MODE: whole document, including forced desktop mode ---------- */
+html.dark-mode,
+html.dark-mode body,
+body.dark-mode {
+  background: #11131a !important;
+  color: #fff !important;
+  color-scheme: dark !important;
+}
+
+html.dark-mode body::before,
+body.dark-mode::before { display: none !important; }
+
+html.dark-mode body > *,
+body.dark-mode > * { border-color: #31374a; }
+
+/* Every common page wrapper gets the dark canvas. */
+html.dark-mode main,
+html.dark-mode section,
+html.dark-mode article,
+html.dark-mode .hero,
+html.dark-mode .features,
+html.dark-mode .courses,
+html.dark-mode .announcements,
+html.dark-mode .news-container,
+html.dark-mode .about-container,
+html.dark-mode .contact-container,
+html.dark-mode .contact-form-section,
+html.dark-mode .login-required,
+html.dark-mode .register-section,
+body.dark-mode main,
+body.dark-mode section,
+body.dark-mode article,
+body.dark-mode .hero,
+body.dark-mode .features,
+body.dark-mode .courses,
+body.dark-mode .announcements,
+body.dark-mode .news-container,
+body.dark-mode .about-container,
+body.dark-mode .contact-container,
+body.dark-mode .contact-form-section,
+body.dark-mode .login-required,
+body.dark-mode .register-section {
+  color: var(--text) !important;
+}
+
+/* Public page surfaces */
+html.dark-mode .public-desktop-nav,
+html.dark-mode .public-mobile-nav,
+html.dark-mode .public-mobile-menu,
+body.dark-mode .public-desktop-nav,
+body.dark-mode .public-mobile-nav,
+body.dark-mode .public-mobile-menu,
+html.dark-mode .top-news-bar,
+body.dark-mode .top-news-bar,
+html.dark-mode footer,
+body.dark-mode footer {
+  background: #1b1f2a !important;
+  color: #fff !important;
+  border-color: #31374a !important;
+}
+
+html.dark-mode .hero,
+body.dark-mode .hero {
+  background: linear-gradient(135deg, #11131a 0%, #1b1324 100%) !important;
+}
+
+/* Cards/panels */
+html.dark-mode .card,
+html.dark-mode .course-card,
+html.dark-mode .announcement-card,
+html.dark-mode .news-card,
+html.dark-mode .about-card,
+html.dark-mode .contact-card,
+html.dark-mode .profile-card,
+html.dark-mode .details-card,
+html.dark-mode .settings-card,
+html.dark-mode .book-card,
+html.dark-mode .video-card,
+html.dark-mode .content-card,
+html.dark-mode .resource-card,
+html.dark-mode .register-box,
+html.dark-mode .login-card,
+html.dark-mode .panel,
+html.dark-mode .library-header,
+html.dark-mode .video-header,
+body.dark-mode .card,
+body.dark-mode .course-card,
+body.dark-mode .announcement-card,
+body.dark-mode .news-card,
+body.dark-mode .about-card,
+body.dark-mode .contact-card,
+body.dark-mode .profile-card,
+body.dark-mode .details-card,
+body.dark-mode .settings-card,
+body.dark-mode .book-card,
+body.dark-mode .video-card,
+body.dark-mode .content-card,
+body.dark-mode .resource-card,
+body.dark-mode .register-box,
+body.dark-mode .login-card,
+body.dark-mode .panel,
+body.dark-mode .library-header,
+body.dark-mode .video-header {
+  background: #1b1f2a !important;
+  color: #fff !important;
+  border-color: #31374a !important;
+}
+
+/* Text */
+html.dark-mode h1, html.dark-mode h2, html.dark-mode h3,
+html.dark-mode h4, html.dark-mode h5, html.dark-mode h6,
+html.dark-mode p, html.dark-mode label, html.dark-mode small,
+html.dark-mode li, html.dark-mode td, html.dark-mode th,
+html.dark-mode .public-links a, html.dark-mode .public-mobile-menu a,
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3,
+body.dark-mode h4, body.dark-mode h5, body.dark-mode h6,
+body.dark-mode p, body.dark-mode label, body.dark-mode small,
+body.dark-mode li, body.dark-mode td, body.dark-mode th,
+body.dark-mode .public-links a, body.dark-mode .public-mobile-menu a {
+  color: #fff !important;
+}
+
+html.dark-mode p, html.dark-mode small, html.dark-mode label,
+body.dark-mode p, body.dark-mode small, body.dark-mode label {
+  color: #cfcfcf !important;
+}
+
+html.dark-mode input, html.dark-mode textarea, html.dark-mode select,
+body.dark-mode input, body.dark-mode textarea, body.dark-mode select {
+  background: #242938 !important;
+  color: #fff !important;
+  border-color: #41495f !important;
+}
+
+html.dark-mode input::placeholder, html.dark-mode textarea::placeholder,
+body.dark-mode input::placeholder, body.dark-mode textarea::placeholder {
+  color: #b8bcc8 !important;
+}
+
+/* Tables and lines */
+html.dark-mode table th, body.dark-mode table th { color: #c47dff !important; }
+html.dark-mode table td, body.dark-mode table td { border-color: #31374a !important; }
+
+/* News category/date */
+html.dark-mode .news-category, body.dark-mode .news-category {
+  background: #242938 !important;
+  color: #c47dff !important;
+}
+html.dark-mode .news-date, body.dark-mode .news-date { color: #c47dff !important; }
+
+/* Login/register readability */
+html.dark-mode .login-card h1,
+body.dark-mode .login-card h1,
+html.dark-mode .forgot,
+body.dark-mode .forgot { color: #c47dff !important; }
+html.dark-mode .divider::before, html.dark-mode .divider::after,
+body.dark-mode .divider::before, body.dark-mode .divider::after { background: #4a5162 !important; }
+html.dark-mode .divider span, body.dark-mode .divider span { color: #cfcfcf !important; }
+
+/* ---------- THEME TOGGLE ---------- */
+.lt-theme-toggle {
+  position: fixed !important;
+  right: 18px !important;
+  bottom: 18px !important;
+  z-index: 20000 !important;
+  width: 52px !important;
+  height: 52px !important;
+  border-radius: 50% !important;
+  border: 1px solid var(--primary) !important;
+  background: var(--primary) !important;
+  color: #fff !important;
+  box-shadow: 0 10px 28px rgba(0,0,0,.20) !important;
+}
+
+/* Keep mobile menu from becoming a horizontally scrolling page. */
+@media (max-width: 768px) {
+  body { overflow-x: hidden !important; }
+  .public-mobile-menu ul { width: 100% !important; box-sizing: border-box !important; }
+}
+
+/* Avoid a white strip in browser desktop mode / overscroll areas. */
+@media (min-width: 769px) {
+  html.dark-mode, body.dark-mode { min-height: 100vh !important; }
+  body.dark-mode { background: #11131a !important; }
+}
+
+/* ==========================================================
+   L-TUTOR FINAL STABILITY PATCH 2026-09
+   These rules intentionally come last so old page-specific CSS
+   cannot reintroduce the white/dark split or oversized logo.
+========================================================== */
+
+/* One consistent canvas in dark mode, including browser "desktop site" mode. */
+html.dark-mode,
+html.dark-mode body,
+body.dark-mode {
+  background: #11131a !important;
+  color: #fff !important;
+  min-height: 100vh !important;
+  color-scheme: dark !important;
+}
+
+html.dark-mode body > *:not(.lt-theme-toggle),
+body.dark-mode body > *:not(.lt-theme-toggle) {
+  background-color: #11131a !important;
+  color: #fff !important;
+}
+
+html.dark-mode .public-header,
+body.dark-mode .public-header,
+html.dark-mode .public-desktop-nav,
+body.dark-mode .public-desktop-nav,
+html.dark-mode .public-mobile-nav,
+body.dark-mode .public-mobile-nav,
+html.dark-mode .public-mobile-menu,
+body.dark-mode .public-mobile-menu,
+html.dark-mode .topbar,
+body.dark-mode .topbar,
+html.dark-mode header.navbar,
+body.dark-mode header.navbar,
+html.dark-mode footer,
+body.dark-mode footer {
+  background: #1b1f2a !important;
+  color: #fff !important;
+  border-color: #31374a !important;
+}
+
+html.dark-mode .hero,
+body.dark-mode .hero {
+  background: linear-gradient(135deg, #11131a 0%, #1b1324 100%) !important;
+}
+
+/* Page-specific sections that were previously left light. */
+html.dark-mode .page-header,
+body.dark-mode .page-header,
+html.dark-mode .search-section,
+body.dark-mode .search-section,
+html.dark-mode .lecturer-section,
+body.dark-mode .lecturer-section,
+html.dark-mode .news-container,
+body.dark-mode .news-container,
+html.dark-mode .about-section,
+body.dark-mode .about-section,
+html.dark-mode .about-container,
+body.dark-mode .about-container,
+html.dark-mode .contact-section,
+body.dark-mode .contact-section,
+html.dark-mode .contact-container,
+body.dark-mode .contact-container,
+html.dark-mode .course-section,
+body.dark-mode .course-section,
+html.dark-mode .courses-section,
+body.dark-mode .courses-section {
+  background: #11131a !important;
+  color: #fff !important;
+}
+
+/* Keep all normal text readable after the canvas override. */
+html.dark-mode .page-header h1,
+html.dark-mode .page-header p,
+html.dark-mode .lecturer-section h1,
+html.dark-mode .lecturer-section h2,
+html.dark-mode .lecturer-section h3,
+html.dark-mode .lecturer-section p,
+body.dark-mode .page-header h1,
+body.dark-mode .page-header p,
+body.dark-mode .lecturer-section h1,
+body.dark-mode .lecturer-section h2,
+body.dark-mode .lecturer-section h3,
+body.dark-mode .lecturer-section p {
+  color: #fff !important;
+}
+
+/* Public navigation must be a real flex header, never a clipped logo. */
+.public-desktop-nav,
+.public-mobile-nav,
+.public-mobile-brand,
+.public-brand {
+  box-sizing: border-box !important;
+}
+
+.public-brand,
+.public-mobile-brand {
+  display: flex !important;
+  align-items: center !important;
+  flex: 0 0 auto !important;
+  overflow: visible !important;
+}
+
+.public-brand img,
+.public-mobile-brand img {
+  display: block !important;
+  width: 42px !important;
+  height: 42px !important;
+  min-width: 42px !important;
+  min-height: 42px !important;
+  max-width: 42px !important;
+  max-height: 42px !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  flex: 0 0 42px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border-radius: 50% !important;
+}
+
+.public-mobile-brand img {
+  width: 38px !important;
+  height: 38px !important;
+  min-width: 38px !important;
+  min-height: 38px !important;
+  max-width: 38px !important;
+  max-height: 38px !important;
+  flex-basis: 38px !important;
+}
+
+.public-brand span,
+.public-mobile-brand span {
+  display: block !important;
+  line-height: 1 !important;
+}
+
+/* Mobile public pages: same compact top edge on Home, About, Courses, News and Contact. */
+@media (max-width: 768px) {
+  .public-header {
+    position: sticky !important;
+    top: 0 !important;
+    width: 100% !important;
+    z-index: 50000 !important;
+  }
+
+  .public-mobile-nav {
+    height: 70px !important;
+    min-height: 70px !important;
+    padding: 8px 18px !important;
+  }
+
+  .public-mobile-menu {
+    top: 70px !important;
+    max-height: calc(100vh - 70px) !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+  }
+
+  .public-mobile-menu ul {
+    margin: 0 !important;
+    padding: 10px 0 20px !important;
+    width: 100% !important;
+  }
+
+  body { overflow-x: hidden !important; }
+}
+
+/* Desktop-mode on a phone should still use one dark canvas. */
+@media (min-width: 769px) {
+  html.dark-mode,
+  html.dark-mode body,
+  body.dark-mode {
+    width: 100% !important;
+    min-width: 0 !important;
+    background: #11131a !important;
+  }
+}
+
+
+/* Hide protected pages until their route guard has verified Firebase Auth. */
+html.lt-guard-pending body { visibility: hidden !important; }
+html.lt-guard-pending body::before { display:none !important; }

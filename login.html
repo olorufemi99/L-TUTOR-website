@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff" id="ltThemeColor">
+<meta name="color-scheme" content="light dark">
+
+<title>L-TUTOR | Student Login</title>
+
+<link rel="stylesheet" href="login.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="stylesheet" href="theme.css">
+
+<link rel="stylesheet" href="final-fixes.css">
+
+</head>
+
+<body>
+
+<div class="login-scene" id="loginScene">
+
+<div class="login-board-shell">
+
+<div class="login-flipper" id="loginFlipper">
+
+<!-- STUDENT LOGIN -->
+<div class="login-face login-front">
+<div class="login-card">
+
+<img src="images/logo.png" class="logo" alt="L-TUTOR">
+
+<h1>STUDENT LOGIN</h1>
+
+<form id="loginForm">
+
+<div class="input-box">
+<i class="fa-solid fa-envelope"></i>
+<input type="email" id="email" placeholder="Email Address" required>
+</div>
+
+<div class="input-box">
+<i class="fa-solid fa-lock"></i>
+<input type="password" id="password" placeholder="Password" required>
+<i class="fa-solid fa-eye toggle-password" onclick="togglePassword()"></i>
+</div>
+
+<div class="remember">
+<label>
+<input type="checkbox" id="remember">
+Remember Me
+</label>
+</div>
+
+<button type="submit" class="login-btn">
+<i class="fa-solid fa-right-to-bracket"></i>
+LOGIN
+</button>
+
+<a href="#" id="forgotPassword" class="forgot">Forgot Password?</a>
+
+<div class="divider"><span>OR</span></div>
+
+<a href="register.html" class="register-btn">
+<i class="fa-solid fa-user-plus"></i>
+Create Student Account
+</a>
+
+<a href="index.html" class="back-home">
+<i class="fa-solid fa-arrow-left"></i>
+Back to Home
+</a>
+
+</form>
+</div>
+</div>
+
+<!-- ADMIN LOGIN -->
+<div class="login-face login-back">
+<div class="login-card admin-card">
+
+<img src="images/logo.png" class="logo" alt="L-TUTOR">
+
+<h1>ADMIN LOGIN</h1>
+
+<p class="admin-subtitle">Authorized administrators only.</p>
+
+<form id="adminLoginForm">
+
+<div class="input-box">
+<i class="fa-solid fa-envelope"></i>
+<input type="email" id="adminEmail" placeholder="Administrator Email" required>
+</div>
+
+<div class="input-box">
+<i class="fa-solid fa-lock"></i>
+<input type="password" id="adminPassword" placeholder="Password" required>
+<i class="fa-solid fa-eye admin-toggle-password" onclick="toggleAdminPassword()"></i>
+</div>
+
+<button type="submit" class="login-btn">
+<i class="fa-solid fa-shield-halved"></i>
+SECURE LOGIN
+</button>
+
+<a href="index.html" class="back-home">
+<i class="fa-solid fa-arrow-left"></i>
+Back to Home
+</a>
+
+</form>
+</div>
+</div>
+
+</div>
+
+<button type="button" class="login-switch" id="loginSwitch" aria-label="Switch to administrator login" title="Switch to administrator login">
+    <span class="switch-icon" aria-hidden="true"><i class="fa-solid fa-arrow-right-arrow-left"></i></span>
+</button>
+
+</div>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+<!-- SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<!-- Firebase -->
+<script src="firebase.js"></script>
+
+<!-- Popup System -->
+<script src="popup.js"></script>
+
+<!-- Login -->
+<script src="login.js"></script>
+  
+<script src="theme.js"></script>
+
+<script src="animations.js"></script>
+</body>
+</html>

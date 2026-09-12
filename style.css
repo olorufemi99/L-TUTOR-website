@@ -1,0 +1,1440 @@
+/* ===============================
+   L-TUTOR MAIN STYLES
+================================= */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#fff;
+color:#222;
+}
+
+/* =====================================================
+   L-TUTOR NAVBAR
+   DESKTOP + MOBILE
+===================================================== */
+
+
+/* =====================================================
+   DESKTOP NAVBAR - DEFAULT
+===================================================== */
+
+.desktop-navbar {
+    display: flex;
+}
+
+.mobile-navbar,
+.mobile-menu {
+    display: none;
+}
+
+
+/* =====================================================
+   MOBILE NAVBAR
+===================================================== */
+
+@media screen and (max-width: 768px) {
+
+    /* =================================================
+       HIDE DESKTOP NAVBAR
+    ================================================= */
+
+    header .desktop-navbar {
+        display: none !important;
+        visibility: hidden !important;
+    }
+
+
+    /* =================================================
+       SHOW MOBILE NAVBAR
+    ================================================= */
+
+    header .mobile-navbar {
+        display: flex !important;
+
+        width: 100% !important;
+        height: 70px !important;
+
+        box-sizing: border-box;
+
+        justify-content: space-between;
+        align-items: center;
+
+        padding: 8px 6% !important;
+
+        margin: 0 !important;
+
+        background: #ffffff !important;
+
+        position: sticky;
+        top: 0;
+
+        z-index: 1000;
+
+        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+    }
+
+
+    /* =================================================
+       MOBILE LOGO CONTAINER
+    ================================================= */
+
+    header .mobile-navbar .mobile-logo {
+        display: flex !important;
+
+        align-items: center !important;
+
+        gap: 5px !important;
+
+        width: auto !important;
+        height: auto !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        background: transparent !important;
+    }
+
+
+    /* =================================================
+       MOBILE LOGO IMAGE
+    ================================================= */
+
+    header .mobile-navbar .mobile-logo img {
+        display: block !important;
+
+        visibility: visible !important;
+
+        opacity: 1 !important;
+
+        width: 50px !important;
+        height: 50px !important;
+
+        min-width: 50px !important;
+        min-height: 50px !important;
+
+        max-width: 50px !important;
+        max-height: 50px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        object-fit: contain !important;
+
+        background: transparent !important;
+
+        border: none !important;
+
+        box-shadow: none !important;
+    }
+
+
+    /* =================================================
+       MOBILE LOGO TEXT
+    ================================================= */
+
+    header .mobile-navbar .mobile-logo h2 {
+        display: block !important;
+
+        visibility: visible !important;
+
+        opacity: 1 !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        font-size: 23px !important;
+
+        font-weight: 700 !important;
+
+        color: black !important;
+
+        background: transparent !important;
+    }
+
+
+    /* =================================================
+       HAMBURGER BUTTON
+    ================================================= */
+
+    header .mobile-navbar button.hamburger {
+        display: flex !important;
+
+        width: 45px !important;
+        height: 45px !important;
+
+        min-width: 45px !important;
+        min-height: 45px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        border: none !important;
+        outline: none !important;
+
+        background: transparent !important;
+        background-color: transparent !important;
+
+        box-shadow: none !important;
+
+        appearance: none !important;
+        -webkit-appearance: none !important;
+
+        cursor: pointer;
+
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+
+        gap: 5px !important;
+    }
+
+
+    /* =================================================
+       REMOVE PURPLE BUTTON BACKGROUND
+    ================================================= */
+
+    header .mobile-navbar button.hamburger:hover,
+    header .mobile-navbar button.hamburger:focus,
+    header .mobile-navbar button.hamburger:focus-visible,
+    header .mobile-navbar button.hamburger:active {
+        display: flex !important;
+
+        background: transparent !important;
+        background-color: transparent !important;
+
+        border: none !important;
+        outline: none !important;
+
+        box-shadow: none !important;
+    }
+
+
+    /* =================================================
+       HAMBURGER LINES
+    ================================================= */
+
+    header .mobile-navbar button.hamburger span {
+        display: block !important;
+
+        visibility: visible !important;
+
+        opacity: 1 !important;
+
+        width: 27px !important;
+        height: 3px !important;
+
+        min-width: 27px !important;
+        min-height: 3px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        background: black !important;
+        background-color: black !important;
+
+        border: none !important;
+
+        border-radius: 5px !important;
+
+        box-shadow: none !important;
+
+        transition: 0.3s ease;
+    }
+
+
+    /* =================================================
+       HAMBURGER → X
+    ================================================= */
+
+    header .mobile-navbar button.hamburger.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    header .mobile-navbar button.hamburger.active span:nth-child(2) {
+        opacity: 0 !important;
+    }
+
+    header .mobile-navbar button.hamburger.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+
+    /* =================================================
+       MOBILE MENU
+    ================================================= */
+
+    header .mobile-menu {
+        display: block !important;
+
+        position: fixed;
+
+        top: 70px;
+        left: 0;
+
+        width: 100% !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        background: #ffffff !important;
+
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+
+        transform: translateY(-120%);
+
+        opacity: 0;
+
+        visibility: hidden;
+
+        transition: 0.35s ease;
+
+        z-index: 999;
+    }
+
+
+    /* =================================================
+       MOBILE MENU OPEN
+    ================================================= */
+
+    header .mobile-menu.active {
+        transform: translateY(0);
+
+        opacity: 1;
+
+        visibility: visible;
+    }
+
+
+    /* =================================================
+       MENU LIST
+    ================================================= */
+
+    header .mobile-menu ul {
+        list-style: none !important;
+
+        margin: 0 !important;
+
+        padding: 15px 6% 20px !important;
+    }
+
+
+    header .mobile-menu li {
+        margin: 0 !important;
+
+        padding: 0 !important;
+    }
+
+
+    /* =================================================
+       MENU LINKS
+    ================================================= */
+
+    header .mobile-menu a {
+        display: block !important;
+
+        text-decoration: none !important;
+
+        color: #333 !important;
+
+        font-weight: 600;
+
+        font-size: 16px;
+
+        padding: 14px 15px;
+
+        border-radius: 8px;
+
+        transition: 0.3s ease;
+    }
+
+
+    header .mobile-menu a:hover {
+        background: #F3E5F5 !important;
+
+        color: #6A1B9A !important;
+    }
+
+
+    /* =================================================
+       MOBILE LOGIN BUTTON
+    ================================================= */
+
+    header .mobile-menu .mobile-login-btn {
+        display: block !important;
+
+        background: #6A1B9A !important;
+
+        color: #ffffff !important;
+
+        text-align: center;
+
+        border-radius: 50px;
+
+        margin-top: 10px;
+
+        padding: 13px;
+
+        box-shadow: 0 8px 18px rgba(106, 27, 154, 0.20);
+    }
+}
+
+
+/* =====================================================
+   EXTRA SMALL PHONES
+===================================================== */
+
+@media screen and (max-width: 400px) {
+
+    header .mobile-navbar {
+        height: 61px !important;
+
+        padding: 6px 5% !important;
+    }
+
+
+    header .mobile-navbar .mobile-logo img {
+        width: 45px !important;
+        height: 45px !important;
+
+        min-width: 45px !important;
+        min-height: 45px !important;
+
+        max-width: 45px !important;
+        max-height: 45px !important;
+    }
+
+
+    header .mobile-navbar .mobile-logo h2 {
+        font-size: 21px !important;
+    }
+
+
+    header .mobile-menu {
+        top: 61px !important;
+    }
+}
+
+
+/* =====================================================
+   DESKTOP ONLY
+===================================================== */
+
+@media screen and (min-width: 769px) {
+
+    header .desktop-navbar {
+        display: flex !important;
+
+        visibility: visible !important;
+    }
+
+
+    header .mobile-navbar,
+    header .mobile-menu {
+        display: none !important;
+
+        visibility: hidden !important;
+    }
+}
+
+
+
+
+
+
+/* ===============================
+   NAVBAR
+================================= */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 8%;
+background:#fff;
+box-shadow:0 3px 15px rgba(0,0,0,.08);
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:6px;
+}
+
+.logo img{
+width:70px;
+height:70px;
+object-fit:contain;
+}
+
+.logo h2{
+font-size:28px;
+font-weight:700;
+color:#6A1B9A;
+margin:0;
+}
+
+.nav-links{
+display:flex;
+list-style:none;
+gap:25px;
+}
+
+.nav-links a{
+text-decoration:none;
+color:#333;
+font-weight:600;
+padding:8px 15px;
+border-radius:8px;
+transition:.3s;
+}
+
+.nav-links a:hover{
+background:#F3E5F5;
+color:#6A1B9A;
+}
+
+.login-btn{
+background:#6A1B9A;
+color:#fff;
+padding:13px 28px;
+border-radius:50px;
+font-weight:600;
+text-decoration:none;
+display:inline-block;
+transition:.3s;
+box-shadow:0 10px 20px rgba(106,27,154,.25);
+}
+
+.login-btn:hover{
+background:#4A148C;
+transform:translateY(-3px);
+}
+
+/* ===============================
+   HERO
+================================= */
+
+.hero{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:100px 8%;
+min-height:90vh;
+background:linear-gradient(to right,#fff,#F7F2FC);
+}
+
+.hero-text{
+flex:1;
+}
+
+.hero-text h1{
+font-size:55px;
+line-height:1.2;
+margin-bottom:20px;
+color:#6A1B9A;
+}
+
+.hero-text p{
+font-size:18px;
+line-height:1.8;
+color:#555;
+margin-bottom:35px;
+max-width:550px;
+}
+
+.hero-buttons{
+display:flex;
+gap:20px;
+}
+
+.btn1,
+.btn2{
+padding:15px 30px;
+border-radius:40px;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+}
+
+.btn1{
+background:#6A1B9A;
+color:#fff;
+}
+
+.btn1:hover{
+background:#4A148C;
+transform:translateY(-3px);
+}
+
+.btn2{
+border:2px solid #6A1B9A;
+color:#6A1B9A;
+}
+
+.btn2:hover{
+background:#6A1B9A;
+color:#fff;
+}
+
+.hero-image{
+flex:1;
+text-align:center;
+}
+
+.hero-image img{
+width:90%;
+max-width:550px;
+border-radius:20px;
+}
+/* ===============================
+   FEATURES
+================================= */
+
+.features{
+padding:80px 8%;
+background:#F7F2FC;
+}
+
+.features h2{
+text-align:center;
+font-size:38px;
+color:#6A1B9A;
+margin-bottom:50px;
+}
+
+.feature-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.card{
+background:#fff;
+padding:35px;
+text-align:center;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 18px 35px rgba(106,27,154,.18);
+}
+
+.card i{
+font-size:45px;
+color:#6A1B9A;
+margin-bottom:20px;
+}
+
+.card h3{
+margin-bottom:15px;
+}
+
+.card p{
+color:#666;
+line-height:1.7;
+}
+
+
+/* ===============================
+   COURSES
+================================= */
+
+.courses{
+padding:80px 8%;
+}
+
+.courses h2{
+text-align:center;
+font-size:38px;
+color:#6A1B9A;
+margin-bottom:45px;
+}
+
+.course-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.course-card{
+background:#fff;
+padding:30px;
+border-radius:20px;
+border-top:5px solid #6A1B9A;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.course-card:hover{
+transform:translateY(-10px);
+box-shadow:0 18px 35px rgba(106,27,154,.18);
+}
+
+.course-card h3{
+color:#6A1B9A;
+margin-bottom:10px;
+}
+
+
+/* ===============================
+   FOOTER
+================================= */
+
+footer{
+background:#6A1B9A;
+color:#fff;
+padding:50px 20px;
+text-align:center;
+margin-top:70px;
+}
+
+footer h2{
+margin-bottom:15px;
+}
+
+footer p{
+margin-top:10px;
+opacity:.9;
+}
+
+
+/* ===============================
+   ANIMATION
+================================= */
+
+.hidden{
+opacity:0;
+transform:translateY(40px);
+transition:all .8s ease;
+}
+
+.show{
+opacity:1;
+transform:translateY(0);
+}
+
+
+/* ===============================
+   RESPONSIVE
+================================= */
+
+@media(max-width:900px){
+
+.navbar{
+flex-direction:column;
+gap:20px;
+}
+
+.nav-links{
+flex-wrap:wrap;
+justify-content:center;
+gap:10px;
+}
+
+.hero{
+flex-direction:column-reverse;
+text-align:center;
+padding:60px 8%;
+}
+
+.hero-text h1{
+font-size:40px;
+}
+
+.hero-text p{
+margin:auto;
+margin-bottom:30px;
+}
+
+.hero-buttons{
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.hero-image img{
+width:100%;
+margin-bottom:40px;
+}
+
+}
+/* ======================================
+   HOME ANNOUNCEMENTS
+====================================== */
+
+.announcements{
+
+padding:80px 8%;
+
+background:#f8f9fc;
+
+}
+
+.announcements h2{
+
+text-align:center;
+
+font-size:2rem;
+
+color:#6A1B9A;
+
+margin-bottom:40px;
+
+font-weight:700;
+
+}
+
+#announcementContainer{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+gap:25px;
+
+}
+
+.announcement-card{
+
+background:#fff;
+
+padding:25px;
+
+border-radius:15px;
+
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+transition:.3s;
+
+border-left:5px solid #6A1B9A;
+
+}
+
+.announcement-card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 12px 30px rgba(0,0,0,.15);
+
+}
+
+
+.announcement-card p{
+
+color:#555;
+
+line-height:1.7;
+
+margin-bottom:15px;
+
+}
+
+.announcement-card small{
+
+color:#999;
+
+font-size:.85rem;
+
+}
+/* ======================================
+   FIX ANNOUNCEMENT COLORS
+====================================== */
+
+
+
+.announcement-card p{
+    color:#555 !important;
+    font-size:17px !important;
+}
+
+.announcement-card small{
+    color:#888 !important;
+}
+.announcement-card h3{
+    color:#6A1B9A !important;
+    font-size:22px;
+    font-weight:700;
+}
+/* ======================================
+   L-TUTOR Upload Box
+====================================== */
+
+.upload-box{
+
+display:flex !important;
+
+flex-direction:column !important;
+
+justify-content:center !important;
+
+align-items:center !important;
+
+width:100% !important;
+
+min-height:160px !important;
+
+padding:20px !important;
+
+border:2px dashed #6c3cff !important;
+
+border-radius:12px !important;
+
+background:#faf8ff !important;
+
+cursor:pointer !important;
+
+transition:.3s !important;
+
+margin-top:10px !important;
+
+box-sizing:border-box !important;
+
+}
+
+.upload-box:hover{
+
+background:#f2edff !important;
+
+}
+
+.upload-box i{
+
+font-size:48px !important;
+
+color:#6c3cff !important;
+
+margin-bottom:15px !important;
+
+}
+
+.upload-box p{
+
+margin:0 !important;
+
+font-size:16px !important;
+
+color:#555 !important;
+
+}
+/* ======================================
+UPLOAD COMPONENT
+====================================== */
+
+.upload-box{
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+width:100%;
+min-height:160px;
+padding:20px;
+border:2px dashed #6C3CFF;
+border-radius:12px;
+background:#FAF8FF;
+cursor:pointer;
+transition:.3s;
+text-align:center;
+box-sizing:border-box;
+}
+
+.upload-box:hover{
+background:#F2EDFF;
+}
+
+.upload-box i{
+font-size:50px;
+color:#6C3CFF;
+margin-bottom:15px;
+}
+
+.upload-box p{
+margin:0;
+font-size:15px;
+font-weight:600;
+color:#555;
+}
+
+.upload-success{
+display:none;
+margin-top:15px;
+padding:10px;
+border-radius:8px;
+background:#EAFBF0;
+color:#008A3D;
+font-weight:bold;
+text-align:center;
+}
+#lectureNoteSearch{
+    width:100%;
+    padding:12px 15px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    font-size:15px;
+    margin-bottom:20px;
+}
+
+/* ======================================
+   L-TUTOR DYNAMIC HOME NEWS
+====================================== */
+
+.home-news-image{
+    width:100%;
+    height:180px;
+    margin-bottom:18px;
+    overflow:hidden;
+    border-radius:12px;
+    background:#f3e5f5;
+}
+
+.home-news-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.home-news-category{
+    display:inline-block;
+    margin-bottom:10px;
+    padding:5px 10px;
+    border-radius:20px;
+    background:#f3e5f5;
+    color:#6A1B9A;
+    font-size:11px;
+    font-weight:600;
+}
+
+.news-loading,
+.news-empty{
+    text-align:center;
+    padding:35px 20px;
+    color:#666;
+    background:#fff;
+    border-radius:15px;
+}
+
+.news-loading i,
+.news-empty i{
+    color:#6A1B9A;
+    font-size:24px;
+    margin-bottom:10px;
+}
+
+body.dark-mode .home-news-category{
+    background:var(--surface2);
+    color:var(--primary);
+}
+
+body.dark-mode .news-loading,
+body.dark-mode .news-empty{
+    background:var(--surface);
+    color:var(--text2);
+}
+
+/* ======================================
+   L-TUTOR TOP NEWS STRIP
+====================================== */
+.top-news-bar{
+    width:100%;
+    background:var(--surface,#fff);
+    border-bottom:1px solid var(--border,#ece2ff);
+    box-shadow:0 4px 16px rgba(0,0,0,.05);
+    position:relative;
+    z-index:10;
+}
+.top-news-inner{
+    width:min(1200px,92%);
+    min-height:52px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    gap:14px;
+}
+.top-news-label{
+    flex:0 0 auto;
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    padding:7px 12px;
+    border-radius:999px;
+    background:#6A1B9A;
+    color:#fff;
+    font-size:11px;
+    font-weight:700;
+}
+.top-news-ticker{
+    flex:1;
+    min-width:0;
+    overflow:hidden;
+}
+.top-news-title{
+    color:var(--text,#222);
+    text-decoration:none;
+    font-weight:600;
+    font-size:13px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.top-news-title:hover{color:var(--primary,#6A1B9A);}
+.top-news-date{
+    margin-left:10px;
+    color:var(--text2,#666);
+    font-size:10px;
+}
+.top-news-link{
+    flex:0 0 auto;
+    color:#6A1B9A;
+    text-decoration:none;
+    font-size:11px;
+    font-weight:700;
+}
+.news-retry{
+    border:0;
+    border-radius:999px;
+    padding:9px 16px;
+    background:#6A1B9A;
+    color:#fff;
+    cursor:pointer;
+    font-family:inherit;
+}
+body.dark-mode .top-news-bar{
+    background:var(--surface)!important;
+    border-color:var(--border)!important;
+}
+body.dark-mode .top-news-title{color:var(--text)!important;}
+body.dark-mode .top-news-date{color:var(--text2)!important;}
+@media(max-width:768px){
+    .top-news-inner{width:92%;min-height:46px;gap:8px;}
+    .top-news-label{font-size:9px;padding:6px 9px;}
+    .top-news-title{font-size:11px;}
+    .top-news-date{display:none;}
+    .top-news-link{font-size:10px;}
+}
+
+body.dark-mode .hero{
+    background:linear-gradient(135deg,#11131a 0%,#1b1324 100%) !important;
+}
+body.dark-mode .features,
+body.dark-mode .courses{
+    background:var(--bg)!important;
+}
+body.dark-mode .features .card,
+body.dark-mode .course-card{
+    background:var(--surface)!important;
+    color:var(--text)!important;
+}
+body.dark-mode .features .card p,
+body.dark-mode .course-card p{
+    color:var(--text2)!important;
+}
+body.dark-mode .hero-text h1,
+body.dark-mode .features h2,
+body.dark-mode .courses h2{
+    color:var(--text)!important;
+}
+
+/* ==========================================
+   FINAL PUBLIC THEME + LOGO OVERRIDES
+   ========================================== */
+html,
+body{
+    min-height:100%;
+    background:var(--bg,#f6f2ff);
+}
+
+/* The logo source is a portrait artwork. Keep the cleaned circular asset
+   proportional instead of cropping it with object-fit:cover. */
+.logo img,
+.navbar .logo img,
+.desktop-navbar .logo img,
+.mobile-navbar .mobile-logo img{
+    object-fit:contain !important;
+    object-position:center !important;
+    border-radius:50% !important;
+    background:transparent !important;
+}
+
+body.dark-mode,
+html.dark-mode body{
+    background:var(--bg,#11131a) !important;
+    color:var(--text,#fff) !important;
+}
+
+body.dark-mode .navbar,
+body.dark-mode .desktop-navbar,
+body.dark-mode .mobile-navbar,
+body.dark-mode .mobile-menu{
+    background:var(--surface,#1b1f2a) !important;
+    color:var(--text,#fff) !important;
+    border-color:var(--border,#31374a) !important;
+}
+
+body.dark-mode .navbar .logo h2,
+body.dark-mode .mobile-navbar .mobile-logo h2,
+body.dark-mode .nav-links a{
+    color:var(--text,#fff) !important;
+}
+
+body.dark-mode .mobile-navbar button.hamburger span{
+    background:var(--text,#fff) !important;
+}
+
+body.dark-mode .hero{
+    background:linear-gradient(135deg,#11131a 0%,#1b1324 100%) !important;
+}
+
+body.dark-mode .features,
+body.dark-mode .courses,
+body.dark-mode .announcements{
+    background:var(--bg,#11131a) !important;
+}
+
+body.dark-mode .card,
+body.dark-mode .course-card,
+body.dark-mode .announcement-card,
+body.dark-mode .news-loading,
+body.dark-mode .news-empty{
+    background:var(--surface,#1b1f2a) !important;
+    color:var(--text,#fff) !important;
+    border-color:var(--border,#31374a) !important;
+}
+
+body.dark-mode .card p,
+body.dark-mode .course-card p,
+body.dark-mode .announcement-card p,
+body.dark-mode .announcement-card small{
+    color:var(--text2,#cfcfcf) !important;
+}
+
+body.dark-mode footer{
+    background:var(--surface,#1b1f2a) !important;
+    color:var(--text,#fff) !important;
+    border-top:1px solid var(--border,#31374a) !important;
+}
+
+body.dark-mode footer h2,
+body.dark-mode footer p{
+    color:var(--text,#fff) !important;
+}
+
+/* Prevent forced desktop mode from creating a white page underneath the dark UI. */
+html.dark-mode,
+html.dark-mode body,
+html.dark-mode #root,
+html.dark-mode main{
+    background:var(--bg,#11131a) !important;
+}
+
+/* Mobile browser safe area / edge stays themed. */
+@supports(padding:max(0px)){
+    body{padding-bottom:max(0px, env(safe-area-inset-bottom));}
+}
+
+/* ==========================================================
+   INDEX FINAL MOBILE / DARK MODE FIX
+========================================================== */
+@media(max-width:768px){
+    body > header.public-header + .top-news-bar{
+        width:100% !important;
+    }
+    .top-news-inner{
+        min-height:46px !important;
+        width:92% !important;
+        gap:8px !important;
+    }
+    .top-news-label{
+        font-size:9px !important;
+        padding:6px 9px !important;
+    }
+    .top-news-ticker{
+        font-size:10px !important;
+    }
+    .top-news-link{
+        font-size:9px !important;
+        white-space:nowrap !important;
+    }
+    .hero{
+        padding-top:42px !important;
+    }
+}
+html.dark-mode body .hero,
+html.dark-mode body .features,
+html.dark-mode body .courses,
+html.dark-mode body .announcements{
+    background-color:transparent !important;
+    color:var(--text) !important;
+}
+html.dark-mode body .hero{
+    background:linear-gradient(135deg,#11131a 0%,#1b1324 100%) !important;
+}
+html.dark-mode body .features .card,
+html.dark-mode body .courses .course-card,
+html.dark-mode body .announcements .announcement-card{
+    background:var(--surface) !important;
+}
+
+/* Final index public-header isolation */
+.public-header .public-brand img,
+.public-header .public-mobile-brand img{
+    width:40px !important;
+    height:40px !important;
+    min-width:40px !important;
+    min-height:40px !important;
+    max-width:40px !important;
+    max-height:40px !important;
+    object-fit:contain !important;
+    object-position:center !important;
+    display:block !important;
+    flex:none !important;
+}
+.public-header .public-brand span,
+.public-header .public-mobile-brand span{
+    color:var(--text) !important;
+}
+@media(min-width:769px){
+    .public-header .public-brand img{width:44px!important;height:44px!important;min-width:44px!important;min-height:44px!important;max-width:44px!important;max-height:44px!important;}
+}
+
+
+/* ==========================================================
+   L-TUTOR HOME NEWS — AUTOMATIC LEFT SCROLL
+   Keeps the existing news card appearance; only the movement
+   is changed.
+========================================================== */
+#announcementContainer.news-auto-ready{
+    display:block !important;
+    overflow:hidden !important;
+    width:100% !important;
+}
+
+.news-auto-track{
+    display:flex !important;
+    flex-wrap:nowrap !important;
+    align-items:stretch !important;
+    gap:25px !important;
+    width:max-content !important;
+    animation:ltutorNewsScrollLeft 30s linear infinite !important;
+    will-change:transform;
+}
+
+.news-auto-track .announcement-card{
+    flex:0 0 300px !important;
+    width:300px !important;
+    min-width:300px !important;
+    box-sizing:border-box !important;
+    margin:0 !important;
+}
+
+.news-auto-track:hover,
+.news-auto-track:active{
+    animation-play-state:paused !important;
+}
+
+@keyframes ltutorNewsScrollLeft{
+    from{transform:translateX(0);}
+    to{transform:translateX(calc(-50% - 12.5px));}
+}
+
+@media(max-width:768px){
+    .news-auto-track{
+        gap:20px !important;
+        animation-duration:24s !important;
+    }
+    .news-auto-track .announcement-card{
+        flex-basis:min(82vw,330px) !important;
+        width:min(82vw,330px) !important;
+        min-width:min(82vw,330px) !important;
+    }
+}
+
+/* ==========================================
+   ADMIN LOCAL FILE PREVIEWS
+   ========================================== */
+.admin-local-preview{
+    margin-top:12px;padding:12px;border:1px solid #e2d7f5;border-radius:14px;
+    background:#fff;text-align:center;
+}
+.admin-local-preview img{
+    max-width:100%;max-height:240px;object-fit:contain;border-radius:10px;display:block;margin:auto;
+}
+.admin-preview-name{margin-top:8px;font-weight:600;word-break:break-word;}
+.admin-preview-pdf-local{width:100%;height:320px;border:0;border-radius:10px;background:#fff;}
+.admin-preview-video-local{width:100%;max-height:300px;border-radius:10px;}
+.admin-generic-file{display:flex;flex-direction:column;gap:8px;align-items:center;padding:28px;}
+.admin-generic-file i{font-size:48px;color:#6A1B9A;}
+body.dark-mode .admin-local-preview{background:var(--surface,#1b1f2a);border-color:var(--border,#31374a);color:var(--text,#fff);}
+
+/* ==========================================
+   HOME NEWS — SAME CARD DESIGN, MOVING LEFT
+   ========================================== */
+#announcementContainer.news-auto-ready{
+    display:block!important;width:100%!important;overflow:hidden!important;
+}
+.news-auto-viewport{
+    width:100%;overflow-x:auto;overflow-y:hidden;
+    scrollbar-width:none;-ms-overflow-style:none;
+    cursor:grab;touch-action:pan-x;
+}
+.news-auto-viewport::-webkit-scrollbar{display:none;}
+.news-auto-viewport:active{cursor:grabbing;}
+.news-auto-track{
+    display:flex!important;flex-wrap:nowrap!important;align-items:stretch;
+    gap:25px;width:max-content!important;
+}
+.news-auto-track .news-home-card{
+    flex:0 0 300px!important;width:300px!important;min-width:300px!important;
+    box-sizing:border-box;margin:0!important;text-decoration:none;
+}
+.news-home-card h3,.news-home-card p,.news-home-card small{ text-decoration:none; }
+.home-news-read{
+    display:inline-flex;align-items:center;gap:7px;margin-top:14px;
+    color:#6A1B9A;font-weight:600;font-size:13px;
+}
+@media(max-width:768px){
+    .news-auto-track{gap:20px;}
+    .news-auto-track .news-home-card{
+        flex-basis:min(82vw,330px)!important;width:min(82vw,330px)!important;min-width:min(82vw,330px)!important;
+    }
+}
+body.dark-mode .news-home-card,html.dark-mode body .news-home-card{
+    background:var(--surface,#1b1f2a)!important;color:var(--text,#fff)!important;
+}
+body.dark-mode .news-home-card h3,html.dark-mode body .news-home-card h3{color:var(--text,#fff)!important;}
+body.dark-mode .news-home-card small,html.dark-mode body .news-home-card small{color:var(--text2,#cfcfcf)!important;}
+
+/* ==========================================
+   HOME NEWS IMAGES — FILL THE ALBUM
+   ========================================== */
+.home-news-image{
+    width:100%!important;
+    height:220px!important;
+    overflow:hidden!important;
+    background:#f3e5f5;
+    border-radius:14px;
+}
+.home-news-image img{
+    width:100%!important;
+    height:100%!important;
+    display:block!important;
+    object-fit:cover!important;
+    object-position:center!important;
+}
+@media(max-width:768px){
+    .home-news-image{height:190px!important;}
+}

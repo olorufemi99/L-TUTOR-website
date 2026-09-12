@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff" id="ltThemeColor">
+<meta name="color-scheme" content="light dark">
+
+<title>L-TUTOR | Learn Smarter</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="public-nav.css">
+
+<link rel="stylesheet" href="final-fixes.css">
+
+</head>
+
+<body>
+  
+<!-- ================================
+     DESKTOP & MOBILE NAVBAR
+================================= -->
+
+<header class="public-header">
+
+    <nav class="public-desktop-nav" aria-label="Main navigation">
+        <a class="public-brand" href="index.html">
+            <img src="images/logo.png" alt="L-TUTOR logo">
+            <span>L-TUTOR</span>
+        </a>
+        <ul class="public-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="public-courses.html">Courses</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a class="public-login" href="login.html">Login</a>
+    </nav>
+
+    <nav class="public-mobile-nav" aria-label="Mobile navigation">
+        <a class="public-mobile-brand" href="index.html">
+            <img src="images/logo.png" alt="L-TUTOR logo">
+            <span>L-TUTOR</span>
+        </a>
+        <button id="publicMenuButton" class="public-menu-button" type="button" aria-label="Open menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <div id="publicMobileMenu" class="public-mobile-menu">
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="public-courses.html">Courses</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a class="mobile-login" href="login.html">Login</a></li>
+        </ul>
+    </div>
+
+</header>
+
+<!-- ================================
+     TOP NEWS BAR
+================================= -->
+<section class="top-news-bar" aria-label="Latest departmental news">
+    <div class="top-news-inner">
+        <span class="top-news-label">
+            <i class="fa-solid fa-bolt"></i> Latest
+        </span>
+        <div id="topNewsTicker" class="top-news-ticker">
+            <span>Loading latest news...</span>
+        </div>
+        <a href="news.html" class="top-news-link">View all <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+</section>
+  
+
+
+<section class="hero">
+
+<div class="hero-text">
+
+<h1>Learn Smarter.<br>Graduate Better.</h1>
+
+<p>
+L-TUTOR is your complete academic platform for lecture notes,
+past questions, announcements, video tutorials and much more.
+</p>
+
+<div class="hero-buttons">
+<a href="public-courses.html" class="btn1">Explore Courses</a>
+<a href="login.html" class="btn2">Student Login</a>
+</div>
+
+</div>
+
+<div class="hero-image">
+<img src="images/hero.png" alt="Hero Image">
+</div>
+
+</section>
+<!-- ========================= -->
+<!-- LATEST NEWS -->
+<!-- ========================= -->
+
+<section class="announcements">
+
+<h2>Latest News</h2>
+
+<div id="announcementContainer">
+
+<p>Loading latest news...</p>
+
+</div>
+
+</section>
+<section class="features">
+
+<h2>Why Choose L-TUTOR?</h2>
+
+<div class="feature-container">
+
+<div class="card">
+<i class="fa-solid fa-book"></i>
+<h3>Course Materials</h3>
+<p>Download lecture notes and handouts instantly.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-file-lines"></i>
+<h3>Past Questions</h3>
+<p>Practice with previous examination questions.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-video"></i>
+<h3>Video Tutorials</h3>
+<p>Watch quality tutorials anywhere anytime.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-bullhorn"></i>
+<h3>Announcements</h3>
+<p>Stay updated with departmental news.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="courses">
+
+<h2>Popular Courses</h2>
+
+<div class="course-grid">
+
+<div class="course-card">
+<h3>LGD101</h3>
+<p>Introduction to Local Government</p>
+</div>
+
+<div class="course-card">
+<h3>LGD326</h3>
+<p>Local Government Administration</p>
+</div>
+
+<div class="course-card">
+<h3>GNS101</h3>
+<p>Use of English</p>
+</div>
+
+<div class="course-card">
+<h3>PUL201</h3>
+<p>Political Institutions</p>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<h2>L-TUTOR</h2>
+
+<p>Empowering students through digital learning.</p>
+
+<p>© 2026 L-TUTOR. All Rights Reserved.</p>
+
+</footer>
+<!-- Firebase -->
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+<script src="firebase.js"></script>
+
+<script src="news.js"></script>
+
+<script src="app.js"></script>
+
+<script src="theme.js"></script>
+<script src="animations.js"></script>
+<script src="public-nav.js"></script>
+</body>
+</html>

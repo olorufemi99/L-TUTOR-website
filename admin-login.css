@@ -1,0 +1,146 @@
+/* ==================================
+   L-TUTOR ADMIN LOGIN
+================================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#4A148C,#6A1B9A,#8E24AA);
+padding:20px;
+}
+
+.login-container{
+width:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.login-box{
+width:100%;
+max-width:430px;
+background:#fff;
+padding:45px 35px;
+border-radius:22px;
+box-shadow:0 20px 45px rgba(0,0,0,.18);
+text-align:center;
+}
+
+.logo{
+width:90px;
+height:90px;
+object-fit:contain;
+margin-bottom:15px;
+}
+
+.login-box h2{
+font-size:30px;
+color:#6A1B9A;
+margin-bottom:8px;
+}
+
+.subtitle{
+font-size:14px;
+color:#666;
+margin-bottom:35px;
+}
+
+.input-box{
+position:relative;
+margin-bottom:22px;
+}
+
+.input-box input{
+width:100%;
+padding:15px 50px;
+border:2px solid #E5D8F5;
+border-radius:50px;
+outline:none;
+font-size:16px;
+transition:.3s;
+}
+
+.input-box input:focus{
+border-color:#6A1B9A;
+}
+
+.input-box i:first-child{
+position:absolute;
+left:18px;
+top:50%;
+transform:translateY(-50%);
+color:#6A1B9A;
+font-size:17px;
+}
+
+.toggle-password{
+position:absolute;
+right:18px;
+top:50%;
+transform:translateY(-50%);
+cursor:pointer;
+color:#888;
+}
+
+.toggle-password:hover{
+color:#6A1B9A;
+}
+
+.login-btn{
+width:100%;
+padding:15px;
+border:none;
+border-radius:50px;
+background:#6A1B9A;
+color:#fff;
+font-size:16px;
+font-weight:600;
+cursor:pointer;
+transition:.3s;
+}
+
+.login-btn:hover{
+background:#4A148C;
+transform:translateY(-2px);
+}
+
+.bottom-links{
+margin-top:25px;
+}
+
+.bottom-links a{
+text-decoration:none;
+color:#6A1B9A;
+font-weight:600;
+transition:.3s;
+}
+
+.bottom-links a:hover{
+color:#4A148C;
+}
+
+@media(max-width:600px){
+
+.login-box{
+padding:35px 25px;
+}
+
+.logo{
+width:75px;
+height:75px;
+}
+
+.login-box h2{
+font-size:26px;
+}
+
+}
